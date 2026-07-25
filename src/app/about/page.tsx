@@ -1,0 +1,482 @@
+"use client";
+
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { MinimalHero } from "@/components/ui/hero-minimalism";
+import { CategorizedFaq } from "@/components/ui/faq-categorized";
+import { VerticalTabs } from "@/components/ui/vertical-tabs";
+import { ScrollToTop } from "@/components/ScrollToTop";
+import {
+  IconTarget,
+  IconEye,
+  IconTrendingUp,
+  IconAward,
+  IconBook,
+  IconUsers,
+  IconClock,
+  IconChartBar,
+  IconCertificate,
+  IconArrowRight,
+} from "@tabler/icons-react";
+import Link from "next/link";
+import Image from "next/image";
+
+const newsCoverage = [
+  {
+    name: "Times of India",
+    tagline: "Leading Daily Press",
+    image: "/toi_coverage.png",
+    desc: "Highlighted SIT's practical methodology and industry-ready mentorship for stock market aspirants.",
+  },
+  {
+    name: "Economic Times",
+    tagline: "Financial Market Journal",
+    image: "/et_coverage.png",
+    desc: "Featured SIT as a premier academy empowering students with price action trading strategies.",
+  },
+  {
+    name: "Business Today",
+    tagline: "Business & Growth Feature",
+    image: "/bt_coverage.png",
+    desc: "Recognized SIT's comprehensive curriculum across Equity, F&O, Forex & Crypto trading.",
+  },
+  {
+    name: "Zee News",
+    tagline: "Media & Broadcast Feature",
+    image: "/zee_coverage.png",
+    desc: "Covered SIT's ISO-certified excellence and real-time live market trading guidance.",
+  },
+];
+
+const highlights = [
+  { icon: IconUsers, value: "250+", label: "Students Trained Offline" },
+  { icon: IconBook, value: "1000+", label: "Live Sessions Completed" },
+  { icon: IconChartBar, value: "5/5", label: "Student Rating (200+)" },
+  { icon: IconClock, value: "4", label: "Dedicated Mentors" },
+];
+
+const mentors = [
+  {
+    name: "Rahul Sharma",
+    role: "Equity & F&O Specialist",
+    experience: "8+ Yrs Exp",
+    avatar: "/avatar_rahul.png",
+    specialty: "Price Action & Option Buying",
+    badgeColor: "bg-[#E0F2FE] text-[#075985] dark:bg-[#073655] dark:text-[#bae6fd]",
+  },
+  {
+    name: "Neha Kapoor",
+    role: "Forex Market Expert",
+    experience: "6+ Yrs Exp",
+    avatar: "/avatar_neha.png",
+    specialty: "Currencies & Global Macro",
+    badgeColor: "bg-[#FCE7F3] text-[#831843] dark:bg-[#4a152e] dark:text-[#fbcfe8]",
+  },
+  {
+    name: "Amit Verma",
+    role: "Crypto & Web3 Strategist",
+    experience: "7+ Yrs Exp",
+    avatar: "/avatar_amit.png",
+    specialty: "Crypto Derivatives & On-Chain",
+    badgeColor: "bg-[#FEF9C3] text-[#713f12] dark:bg-[#423b0a] dark:text-[#fef08a]",
+  },
+  {
+    name: "Priya Malhotra",
+    role: "Derivatives Market Analyst",
+    experience: "5+ Yrs Exp",
+    avatar: "/avatar_priya.png",
+    specialty: "Option Selling & Hedging",
+    badgeColor: "bg-[#F3E8FF] text-[#581c87] dark:bg-[#3b1259] dark:text-[#e9d5ff]",
+  },
+  {
+    name: "Rajesh Kumar",
+    role: "Risk Management Lead",
+    experience: "10+ Yrs Exp",
+    avatar: "/avatar_rajesh.png",
+    specialty: "Capital Protection & Psychology",
+    badgeColor: "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300",
+  },
+  {
+    name: "Vikram Singh",
+    role: "Technical Analysis Lead",
+    experience: "9+ Yrs Exp",
+    avatar: "/avatar_vikram.png",
+    specialty: "Smart Money Concepts & SMC",
+    badgeColor: "bg-cyan-100 text-cyan-800 dark:bg-cyan-950 dark:text-cyan-300",
+  },
+];
+
+export default function AboutPage() {
+  return (
+    <div className="w-full">
+      {/* Hero Section - KEEPING AS IS (user approved) */}
+      <MinimalHero
+        kicker="About Shrestha IT Academy"
+        title={<>Practical Institute.<br />Built for Growth.</>}
+        subtitle="Empower students with practical trading skills, institutional price action mentorship, and real-world market experience."
+        ctaText="View Courses"
+        ctaHref="/courses"
+        tag="Our Mission & Vision"
+        heading="Trusted Trading Education Across India"
+        desc="Dedicated to building confident traders in Equity, Forex, Crypto, and F&O derivatives."
+      />
+
+      <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        {/* About Us Section */}
+        <AnimatedSection className="py-10 md:py-12">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-navy/10 dark:border-white/10 bg-navy-light/60 dark:bg-navy/40 text-xs font-bold uppercase tracking-wider text-navy dark:text-amber">
+              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+              Who We Are
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-dark dark:text-white tracking-tight leading-tight">
+              About <span className="text-[#01488B] dark:text-amber">Shrestha IT</span>
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+              Shrestha IT is a leading learning institute dedicated to providing high-quality education, practical skill development, and career-oriented training programs. We focus on empowering students with industry-relevant knowledge, hands-on experience, and expert mentorship to help them succeed in today&apos;s competitive world.
+            </p>
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              Our training approach combines practical learning, modern technologies, and real-world applications to enhance technical skills, confidence, and professional growth. Along with skill-based education, we also provide career guidance, personality development, and continuous support to help learners become industry-ready professionals.
+            </p>
+          </div>
+        </AnimatedSection>
+
+        {/* Mission & Vision Section - 2 Large Showcase Cards */}
+        <AnimatedSection className="py-6 md:py-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Mission Card */}
+            <div className="group relative flex flex-col justify-between rounded-3xl border border-navy/10 dark:border-white/10 bg-card p-6 sm:p-8 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl overflow-hidden">
+              <div className="relative w-full h-64 sm:h-72 rounded-2xl bg-white overflow-hidden border border-navy/5 dark:border-white/5 mb-6 p-4 flex items-center justify-center shadow-inner">
+                <Image
+                  src="/our_mission_illustration.png"
+                  alt="Our Mission - Shrestha IT"
+                  fill
+                  className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
+                  unoptimized
+                />
+              </div>
+              <div className="space-y-3">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FCE7F3] dark:bg-[#4a152e] text-[#831843] dark:text-[#fbcfe8] text-xs font-black uppercase tracking-wider">
+                  <IconTarget size={18} stroke={2.5} />
+                  <span>Our Mission</span>
+                </div>
+                <h3 className="font-heading text-2xl font-black text-navy-dark dark:text-white tracking-tight">
+                  Actionable Trading Skills & Wealth Building
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  Empower students with practical, actionable trading skills and a rock-solid foundation in wealth-building financial markets across Equity, Forex, Crypto, and F&O Derivatives.
+                </p>
+              </div>
+            </div>
+
+            {/* Vision Card */}
+            <div className="group relative flex flex-col justify-between rounded-3xl border border-navy/10 dark:border-white/10 bg-card p-6 sm:p-8 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl overflow-hidden">
+              <div className="relative w-full h-64 sm:h-72 rounded-2xl bg-white overflow-hidden border border-navy/5 dark:border-white/5 mb-6 p-4 flex items-center justify-center shadow-inner">
+                <Image
+                  src="/our_vision_illustration.png"
+                  alt="Our Vision - Shrestha IT"
+                  fill
+                  className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
+                  unoptimized
+                />
+              </div>
+              <div className="space-y-3">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E0F2FE] dark:bg-[#073655] text-[#075985] dark:text-[#bae6fd] text-xs font-black uppercase tracking-wider">
+                  <IconEye size={18} stroke={2.5} />
+                  <span>Our Vision</span>
+                </div>
+                <h3 className="font-heading text-2xl font-black text-navy-dark dark:text-white tracking-tight">
+                  India&apos;s Most Trusted Trading Academy
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  Become the most trusted, student-focused trading academy across India with proven institutional price action methodologies and strict risk management rules.
+                </p>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Stats Section - Pastel Cards Style */}
+        <AnimatedSection className="py-10 md:py-12">
+          <div className="text-center mb-10 space-y-2">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-navy/10 dark:border-white/10 bg-navy-light/50 dark:bg-navy/30 text-xs font-bold uppercase tracking-wider text-navy dark:text-amber">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              Our Track Record
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-navy-dark dark:text-white">
+              Numbers That Speak
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            {highlights.map((item, idx) => (
+              <div
+                key={idx}
+                className={`relative flex flex-col items-center text-center p-6 sm:p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${idx === 0
+                  ? "bg-[#FCE7F3] dark:bg-[#4a152e]/80 text-[#831843] dark:text-[#fbcfe8]"
+                  : idx === 1
+                    ? "bg-[#E0F2FE] dark:bg-[#073655]/80 text-[#075985] dark:text-[#bae6fd]"
+                    : idx === 2
+                      ? "bg-[#FEF9C3] dark:bg-[#423b0a]/80 text-[#713f12] dark:text-[#fef08a]"
+                      : "bg-[#F3E8FF] dark:bg-[#3b1259]/80 text-[#581c87] dark:text-[#e9d5ff]"
+                  }`}
+              >
+                <item.icon size={28} stroke={2} className="mb-3 opacity-80" />
+                <div className="text-3xl sm:text-4xl font-black tracking-tight font-heading">
+                  {item.value}
+                </div>
+                <p className="mt-2 text-xs sm:text-sm font-semibold leading-snug opacity-90">
+                  {item.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </AnimatedSection>
+
+        {/* Featured Coverage - SIT in News */}
+        <AnimatedSection className="py-10 md:py-12">
+          <div className="rounded-3xl   p-6 sm:p-8 md:p-10">
+            <div className="mb-8 max-w-2xl">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full  bg-white dark:bg-navy/40 text-xs font-bold uppercase tracking-wider text-navy dark:text-amber mb-4">
+                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                Featured Coverage
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-navy-dark dark:text-white tracking-tight">SIT in News & Press</h2>
+              <p className="mt-2 text-sm sm:text-base text-muted-foreground">Recognized and covered by India&apos;s top financial press and media publications.</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {newsCoverage.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="group flex flex-col rounded-2xl border border-navy/10 dark:border-white/10 bg-card overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+                >
+                  <div className="relative w-full aspect-[4/3] bg-white overflow-hidden border-b border-navy/5 dark:border-white/5">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="p-5 flex flex-col flex-1 justify-between bg-card">
+                    <div>
+                      <div className="flex items-center justify-between gap-2 mb-1.5">
+                        <h3 className="font-heading font-black text-base text-navy-dark dark:text-white group-hover:text-[#01488B] dark:group-hover:text-amber transition-colors">
+                          {item.name}
+                        </h3>
+                        <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-navy-light dark:bg-navy/50 text-navy dark:text-amber">
+                          Featured
+                        </span>
+                      </div>
+                      <p className="text-xs font-bold text-navy/70 dark:text-amber/80 mb-2">
+                        {item.tagline}
+                      </p>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Course Curriculum Section - Using Vertical Tabs */}
+        <AnimatedSection className="py-10 md:py-12">
+          <VerticalTabs
+            heading="Course Curriculum"
+            subheading="(OUR TRADING MODULES)"
+          />
+        </AnimatedSection>
+
+
+
+        {/* Mentors Section */}
+        <AnimatedSection className="py-12 md:py-16">
+          <div className="text-center mb-12 space-y-3">
+            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-navy/10 dark:border-white/10 bg-navy-light/60 dark:bg-navy/40 text-xs font-bold uppercase tracking-wider text-navy dark:text-amber">
+              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+              Expert Trading Team
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-navy-dark dark:text-white">
+              Learn From Active <span className="text-[#01488B] dark:text-amber">Market Mentors</span>
+            </h2>
+            <p className="text-muted-foreground text-sm sm:text-base max-w-xl mx-auto">
+              Get 1-on-1 mentorship, live market guidance, and risk management strategies from seasoned market professionals.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {mentors.map((mentor, idx) => (
+              <div
+                key={idx}
+                className="group relative flex flex-col justify-between rounded-3xl border border-navy/10 dark:border-white/10 bg-card p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl overflow-hidden"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="relative h-20 w-20 shrink-0 rounded-2xl overflow-hidden bg-slate-100 border-2 border-navy/10 dark:border-amber/20 shadow-md group-hover:scale-105 transition-transform duration-500">
+                    <Image
+                      src={mentor.avatar}
+                      alt={mentor.name}
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <span className={`inline-block text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${mentor.badgeColor}`}>
+                      {mentor.experience}
+                    </span>
+                    <h3 className="font-heading text-lg font-black text-navy-dark dark:text-white group-hover:text-[#01488B] dark:group-hover:text-amber transition-colors">
+                      {mentor.name}
+                    </h3>
+                    <p className="text-xs font-bold text-navy/70 dark:text-amber/80">
+                      {mentor.role}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-3 border-t border-navy/5 dark:border-white/5 flex items-center justify-between text-xs text-muted-foreground">
+                  <span className="font-medium">Specialty:</span>
+                  <span className="font-bold text-navy-dark dark:text-white bg-navy-light/50 dark:bg-navy/40 px-2 py-0.5 rounded text-[11px]">
+                    {mentor.specialty}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </AnimatedSection>
+
+        {/* Mentorship Support Section */}
+        <AnimatedSection className="py-10 md:py-12">
+          <div className="rounded-3xl border border-navy/10 dark:border-white/10 bg-navy-light dark:bg-card p-6 sm:p-8 md:p-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="space-y-4">
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-navy/10 dark:border-white/10 bg-white dark:bg-navy/40 text-xs font-bold uppercase tracking-wider text-navy dark:text-amber">
+                  <IconAward size={14} />
+                  Mentorship & Support
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-black text-navy-dark dark:text-white">
+                  Financial Planning and Analysis
+                </h2>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  SIT offers personalized mentorship from a team of seven industry experts, each specializing in different trading segments. Our mentors provide practical guidance, tailored strategies, and ongoing support to ensure that every learner gains the confidence and skills needed to succeed in trading.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { icon: IconTarget, label: "Complete Edge + Psychology", color: "text-[#831843] dark:text-[#fbcfe8]" },
+                  { icon: IconEye, label: "Emotions Development", color: "text-[#075985] dark:text-[#bae6fd]" },
+                  { icon: IconTrendingUp, label: "Calculate High Risk Trades", color: "text-[#713f12] dark:text-[#fef08a]" },
+                  { icon: IconChartBar, label: "Performance Measurement", color: "text-[#581c87] dark:text-[#e9d5ff]" },
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-3 p-4 rounded-2xl bg-card border border-navy/10 dark:border-white/10 shadow-sm">
+                    <item.icon size={20} className={`shrink-0 ${item.color}`} />
+                    <span className="text-xs font-bold text-navy-dark dark:text-white leading-snug">{item.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Exam & Certification Section */}
+        <AnimatedSection className="py-10 md:py-12">
+          <div className="rounded-3xl border border-navy/10 dark:border-white/10 bg-card p-6 sm:p-8 md:p-10 shadow-sm">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative flex items-center justify-center w-full max-w-md mx-auto aspect-[4/3] rounded-2xl overflow-hidden bg-white border border-navy/10 dark:border-white/10 p-2 shadow-sm group">
+                <Image
+                  src="/iso_certificate_illustration.png"
+                  alt="ISO Certified Excellence - SIT Trading Academy"
+                  fill
+                  className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+                  unoptimized
+                />
+              </div>
+              <div className="space-y-4">
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-navy/10 dark:border-white/10 bg-navy-light/60 dark:bg-navy/40 text-xs font-bold uppercase tracking-wider text-navy dark:text-amber">
+                  <IconCertificate size={14} />
+                  Exam & Certification
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-black text-navy-dark dark:text-white">
+                  ISO Certified Excellence
+                </h2>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  SIT ensures that learners are future-ready by offering comprehensive exams to test their trading knowledge and skills. Upon successful completion, participants receive an ISO certification that self-validates their expertise in trading stocks, forex, and cryptocurrency, providing them with a competitive edge in the financial market.
+                </p>
+                <div className="p-4 rounded-2xl bg-navy/5 dark:bg-amber/10 border border-navy/10 dark:border-amber/20">
+                  <p className="text-xs font-semibold text-navy dark:text-amber">
+                    🎓 Best students may get offered by us to join our SIT team.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* FAQ Section - KEEPING AS IS (user approved) */}
+        <AnimatedSection className="py-10 md:py-12">
+          <CategorizedFaq />
+        </AnimatedSection>
+
+        {/* CTA Section */}
+        <AnimatedSection className="py-10 md:py-12">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#021838] via-[#01488B] to-[#040914] text-white p-8 sm:p-14 text-center space-y-6 shadow-2xl border border-white/10">
+            {/* Ambient Gradient Glows */}
+            <div className="absolute -top-24 -left-24 w-72 h-72 bg-amber/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-[#01488B]/40 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.15),transparent_50%)] pointer-events-none" />
+
+            <div className="relative z-10 space-y-6 max-w-2xl mx-auto">
+
+
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white">
+                Start Your Trading Journey Today
+              </h2>
+
+              <p className="text-sm sm:text-base text-blue-100/90 max-w-xl mx-auto leading-relaxed">
+                Join our community of 250+ traders and get expert mentorship in Equity, Forex, Crypto & Derivatives markets.
+              </p>
+
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl bg-amber hover:bg-amber-light text-navy-dark text-sm font-black transition-all duration-300 shadow-lg shadow-amber/20 hover:shadow-amber/40 hover:-translate-y-0.5"
+                >
+                  <span>Contact Us</span>
+                  <IconArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+                <Link
+                  href="/courses"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white text-sm font-bold transition-all duration-300 hover:-translate-y-0.5"
+                >
+                  <span>Explore Courses</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Contact Footer */}
+        <AnimatedSection className="py-8 border-t border-navy/10 dark:border-white/10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+            <div>
+              <p className="text-xs font-bold text-navy-dark dark:text-white">Email</p>
+              <p className="text-xs text-muted-foreground mt-1">shresthaedutech2026@gmail.com</p>
+            </div>
+            <div>
+              <p className="text-xs font-bold text-navy-dark dark:text-white">Phone</p>
+              <p className="text-xs text-muted-foreground mt-1">+91 9236666923 / +91 7428692121</p>
+            </div>
+            <div>
+              <p className="text-xs font-bold text-navy-dark dark:text-white">Address</p>
+              <p className="text-xs text-muted-foreground mt-1">Third Floor, 167B, Metro Pillar No. 672 Uttam Nagar, Delhi, 110059</p>
+            </div>
+          </div>
+        </AnimatedSection>
+
+      </main>
+
+      <ScrollToTop />
+    </div>
+  );
+}
