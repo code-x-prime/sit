@@ -3,42 +3,23 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  IconTrendingUp,
-  IconTrendingDown,
-  IconChartLine,
-  IconChartPie,
-  IconCoins,
-  IconCurrencyDollar,
-  IconCurrencyEuro,
-  IconCurrencyBitcoin,
-  IconCurrencyEthereum,
-  IconCurrencyRupee,
-  IconWallet,
-  IconAward,
-  IconBook,
-  IconUsers,
-  IconDeviceLaptop,
-  IconBriefcase
-} from "@tabler/icons-react";
 
-const iconConfigs = [
-  { Icon: IconTrendingUp, color: "#10B981" }, // Green
-  { Icon: IconTrendingDown, color: "#EF4444" }, // Red
-  { Icon: IconChartLine, color: "#3B82F6" }, // Blue
-  { Icon: IconChartPie, color: "#8B5CF6" }, // Purple
-  { Icon: IconCoins, color: "#F59E0B" }, // Gold
-  { Icon: IconCurrencyDollar, color: "#10B981" },
-  { Icon: IconCurrencyEuro, color: "#2563EB" },
-  { Icon: IconCurrencyBitcoin, color: "#F59E0B" },
-  { Icon: IconCurrencyEthereum, color: "#6366F1" },
-  { Icon: IconCurrencyRupee, color: "#EF4444" },
-  { Icon: IconWallet, color: "#14B8A6" },
-  { Icon: IconAward, color: "#F5B800" }, // Amber/Yellow
-  { Icon: IconBook, color: "#3B82F6" },
-  { Icon: IconUsers, color: "#06B6D4" },
-  { Icon: IconDeviceLaptop, color: "#64748B" },
-  { Icon: IconBriefcase, color: "#F5B800" }
+const logoConfigs = [
+  { src: "/logos/zerodha.jpeg", alt: "Zerodha" },
+  { src: "/logos/groww.png", alt: "Groww" },
+  { src: "/logos/angelone.png", alt: "Angel One" },
+  { src: "/logos/dhan.jpeg", alt: "Dhan" },
+  { src: "/logos/trading-view.png", alt: "Trading View" },
+  { src: "/logos/meta-5.png", alt: "MetaTrader 5" },
+  { src: "/logos/nse-india.png", alt: "NSE India" },
+  { src: "/logos/fyers.jpeg", alt: "Fyers" },
+  { src: "/logos/sharekhan.jpeg", alt: "Sharekhan" },
+  { src: "/logos/sensibull.png", alt: "Sensibull" },
+  { src: "/logos/exness.jpeg", alt: "Exness" },
+  { src: "/logos/vantage.jpeg", alt: "Vantage" },
+  { src: "/logos/delta-exchange.png", alt: "Delta Exchange" },
+  { src: "/logos/screener.png", alt: "Screener" },
+  { src: "/logos/investopedia.png", alt: "Investopedia" },
 ];
 
 interface FeatureSectionProps {
@@ -60,7 +41,7 @@ export default function FeatureSection({
 }: FeatureSectionProps) {
   const orbitCount = 3;
   const orbitGap = 7; // rem between orbits
-  const iconsPerOrbit = Math.ceil(iconConfigs.length / orbitCount);
+  const iconsPerOrbit = Math.ceil(logoConfigs.length / orbitCount);
 
   return (
     <section className="relative max-w-7xl mx-auto my-10 px-6 sm:px-10 flex flex-col md:flex-row items-center justify-between min-h-[30rem] border border-navy/10 dark:border-white/10 bg-navy text-white overflow-hidden rounded-2xl shadow-xl">
@@ -115,26 +96,30 @@ export default function FeatureSection({
                   animation: `spin ${15 + orbitIdx * 8}s linear infinite`,
                 }}
               >
-                {iconConfigs
+                {logoConfigs
                   .slice(orbitIdx * iconsPerOrbit, orbitIdx * iconsPerOrbit + iconsPerOrbit)
-                  .map((cfg, iconIdx) => {
-                    const angle = iconIdx * angleStep;
+                  .map((logo, logoIdx) => {
+                    const angle = logoIdx * angleStep;
                     const x = (50 + 50 * Math.cos(angle)).toFixed(4);
                     const y = (50 + 50 * Math.sin(angle)).toFixed(4);
 
                     return (
                       <div
-                        key={iconIdx}
-                        className="absolute bg-navy-dark dark:bg-card border border-white/10 rounded-full p-1.5 shadow-md hover:scale-110 transition duration-300"
+                        key={logoIdx}
+                        className="absolute bg-white dark:bg-card border border-white/20 rounded-full shadow-md hover:scale-110 transition duration-300 overflow-hidden flex items-center justify-center"
                         style={{
                           left: `${x}%`,
                           top: `${y}%`,
                           transform: "translate(-50%, -50%)",
+                          width: "2.25rem",
+                          height: "2.25rem",
                         }}
                       >
-                        {cfg.Icon && (
-                          <cfg.Icon className="w-5 h-5 md:w-6 md:h-6" style={{ color: cfg.color }} />
-                        )}
+                        <img
+                          src={logo.src}
+                          alt={logo.alt}
+                          className="w-full h-full object-contain p-0.5"
+                        />
                       </div>
                     );
                   })}
