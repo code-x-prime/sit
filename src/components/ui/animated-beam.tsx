@@ -3,24 +3,27 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { type RefObject, forwardRef, useEffect, useId, useState } from "react";
-import {
-  IconTrendingUp,
-  IconChartLine,
-  IconCurrencyDollar,
-  IconCurrencyBitcoin,
-  IconWallet,
-  IconAward,
-} from "@tabler/icons-react";
-
 import Image from "next/image";
 
 export const TradingIcons = {
-  equity: () => <IconTrendingUp className="h-5 w-5 sm:h-6 sm:w-6 text-emerald-500" />,
-  derivatives: () => <IconChartLine className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500" />,
-  forex: () => <IconCurrencyDollar className="h-5 w-5 sm:h-6 sm:w-6 text-amber-500" />,
-  crypto: () => <IconCurrencyBitcoin className="h-5 w-5 sm:h-6 sm:w-6 text-indigo-500" />,
-  wealth: () => <IconWallet className="h-5 w-5 sm:h-6 sm:w-6 text-pink-500" />,
-  mentorship: () => <IconAward className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-500" />,
+  equity: () => (
+    <Image src="/svg/indian-equity.svg" alt="Indian Equity" width={36} height={36} className="h-8 w-8 sm:h-9 sm:w-9" unoptimized />
+  ),
+  derivatives: () => (
+    <Image src="/svg/f&o-derivatives.svg" alt="F&O Derivatives" width={36} height={36} className="h-8 w-8 sm:h-9 sm:w-9" unoptimized />
+  ),
+  forex: () => (
+    <Image src="/svg/forex-markets.svg" alt="Forex Markets" width={36} height={36} className="h-8 w-8 sm:h-9 sm:w-9" unoptimized />
+  ),
+  crypto: () => (
+    <Image src="/svg/crypto-assets.svg" alt="Crypto Assets" width={36} height={36} className="h-8 w-8 sm:h-9 sm:w-9" unoptimized />
+  ),
+  wealth: () => (
+    <Image src="/svg/wealth-setup.svg" alt="Wealth Setup" width={36} height={36} className="h-8 w-8 sm:h-9 sm:w-9" unoptimized />
+  ),
+  mentorship: () => (
+    <Image src="/svg/mentorship.svg" alt="Mentorship" width={36} height={36} className="h-8 w-8 sm:h-9 sm:w-9" unoptimized />
+  ),
   hub: () => (
     <Image
       src="/logo.jpeg"
@@ -212,7 +215,7 @@ export const Circle = forwardRef<HTMLDivElement, { className?: string; children?
       <div
         ref={ref}
         className={cn(
-          "z-10 flex h-11 w-11 sm:h-14 sm:w-14 items-center justify-center rounded-2xl border border-slate-200 dark:border-slate-800 bg-card p-2 sm:p-3.5 shadow-md backdrop-blur-xl transition-all duration-300 hover:scale-110 hover:border-sky-500 hover:shadow-lg",
+          "z-10 flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl border border-slate-200 dark:border-slate-800 bg-card p-2.5 sm:p-4 shadow-md backdrop-blur-xl transition-all duration-300 hover:scale-110 hover:border-sky-500 hover:shadow-lg",
           className
         )}
       >

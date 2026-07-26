@@ -40,7 +40,8 @@ export function HeroSectionDemo() {
         },
       ]}
       video={{
-        src: "/hero-video.mp4",
+        src: "https://pub-ea068395076f48558e674cdcaf6fd536.r2.dev/learning/general/1785052780059-desktop.mp4",
+        srcMobile: "https://pub-ea068395076f48558e674cdcaf6fd536.r2.dev/learning/general/1785052804709-mobile.mp4",
       }}
     />
   );

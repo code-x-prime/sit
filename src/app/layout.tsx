@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { BackgroundBlur } from "@/components/BackgroundBlur";
-import { Footer } from "@/components/Footer";
+import { Component as TapedFooter } from "@/components/ui/footer-taped-design";
 import { AnimatedNavFramer } from "@/components/ui/navigation-menu";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -28,7 +28,7 @@ export default function RootLayout({
           <div className="flex min-h-screen flex-col">
             <main className="flex-1">{children}</main>
             <ScrollToTop />
-            <Footer />
+            <TapedFooter />
           </div>
         </ThemeProvider>
       </body>

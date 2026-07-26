@@ -56,6 +56,15 @@
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
 
+  /* DaisyUI-style tokens for taped footer */
+  --color-base-100: #ffffff;
+  --color-base-200: #f5f5f5;
+  --color-base-300: #e5e5e5;
+  --color-base-content: #1a1a1a;
+  --color-neutral: #2a2a2a;
+  --color-neutral-content: #f5f5f5;
+  --font-display: var(--font-oswald);
+
   --animate-appear: appear 0.5s ease-out forwards;
   --animate-appear-zoom: appear-zoom 0.5s ease-out forwards;
 

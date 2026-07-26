@@ -6,10 +6,12 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import { useState, useEffect } from "react";
 
 interface SmoothScrollHeroProps {
   scrollHeight?: number;
   videoSrc: string;
+  videoSrcMobile?: string;
   initialClipPercentage?: number;
   finalClipPercentage?: number;
 }
@@ -17,10 +19,21 @@ interface SmoothScrollHeroProps {
 const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({
   scrollHeight = 1200,
   videoSrc,
+  videoSrcMobile,
   initialClipPercentage = 25,
   finalClipPercentage = 75,
 }) => {
   const { scrollY } = useScroll();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const activeVideo = isMobile && videoSrcMobile ? videoSrcMobile : videoSrc;
 
   const clipStart = useTransform(
     scrollY,
@@ -54,7 +67,8 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({
         }}
       >
         <motion.video
-          src={videoSrc}
+          key={activeVideo}
+          src={activeVideo}
           autoPlay
           muted
           loop

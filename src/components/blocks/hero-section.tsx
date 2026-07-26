@@ -27,6 +27,7 @@ interface HeroProps {
   actions: HeroAction[];
   video?: {
     src: string;
+    srcMobile?: string;
     poster?: string;
   };
 }
@@ -80,6 +81,7 @@ export function HeroSection({
       <SmoothScrollHero
         scrollHeight={800}
         videoSrc={video?.src || "/hero-video.mp4"}
+        videoSrcMobile={video?.srcMobile}
         initialClipPercentage={10}
         finalClipPercentage={90}
       />

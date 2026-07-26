@@ -105,8 +105,8 @@ export function FloatingSocialBar() {
             </div>
           </motion.aside>
 
-          {/* MOBILE VIEW: Compact Trigger Button Stacked Directly Above ScrollToTop */}
-          <div className="md:hidden fixed bottom-24 right-7 z-[9999] flex flex-col items-end gap-3">
+          {/* MOBILE VIEW: Hidden */}
+          <div className="hidden fixed bottom-24 right-7 z-[9999] flex flex-col items-end gap-3">
             {/* Mobile Expanded Menu */}
             <AnimatePresence>
               {mobileOpen && (
