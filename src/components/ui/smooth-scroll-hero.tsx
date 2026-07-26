@@ -33,8 +33,6 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const activeVideo = isMobile && videoSrcMobile ? videoSrcMobile : videoSrc;
-
   const clipStart = useTransform(
     scrollY,
     [0, scrollHeight],
@@ -51,7 +49,7 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({
   const videoScale = useTransform(
     scrollY,
     [0, scrollHeight + 500],
-    [1.7, 1]
+    [1.5, 1]
   );
 
   return (
@@ -66,18 +64,50 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({
           willChange: "transform, clip-path",
         }}
       >
-        <motion.video
-          key={activeVideo}
-          src={activeVideo}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover"
-          style={{
-            scale: videoScale,
-          }}
-        />
+        {/* Desktop Video - 16:9 */}
+        {!isMobile && (
+          <motion.video
+            src={videoSrc}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{
+              scale: videoScale,
+            }}
+          />
+        )}
+
+        {/* Mobile Video - 9:16 */}
+        {isMobile && videoSrcMobile && (
+          <motion.video
+            src={videoSrcMobile}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{
+              scale: videoScale,
+            }}
+          />
+        )}
+
+        {/* Fallback - show desktop video on mobile if no mobile video */}
+        {isMobile && !videoSrcMobile && (
+          <motion.video
+            src={videoSrc}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{
+              scale: videoScale,
+            }}
+          />
+        )}
       </motion.div>
     </div>
   );
