@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { BackgroundBlur } from "@/components/BackgroundBlur";
 import { Component as TapedFooter } from "@/components/ui/footer-taped-design";
 import { AnimatedNavFramer } from "@/components/ui/navigation-menu";
+import { MobileNav } from "@/components/ui/mobile-nav";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { FloatingSocialBar } from "@/components/FloatingSocialBar";
@@ -24,6 +25,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <BackgroundBlur />
           <AnimatedNavFramer />
+          <MobileNav />
           <FloatingSocialBar />
           <div className="flex min-h-screen flex-col">
             <main className="flex-1">{children}</main>

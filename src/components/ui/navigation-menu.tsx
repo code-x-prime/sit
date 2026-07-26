@@ -131,7 +131,7 @@ export function AnimatedNavFramer() {
   };
 
   return (
-    <div className="fixed top-3 sm:top-6 left-1/2 -translate-x-1/2 z-50 w-[92vw] sm:w-auto">
+    <div className="hidden md:flex fixed top-3 sm:top-6 left-1/2 -translate-x-1/2 z-50 w-[92vw] sm:w-auto">
       <motion.nav
         initial={{ y: -80, opacity: 0 }}
         animate={isExpanded ? "expanded" : "collapsed"}

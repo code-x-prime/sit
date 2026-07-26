@@ -11,7 +11,7 @@ export const Component = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="my-8 px-4 max-w-7xl mx-auto">
+    <footer className="my-8 px-4 max-w-7xl mx-auto overflow-hidden">
       <div className="relative bg-white rounded-3xl max-w-5xl mx-auto px-4 sm:px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="hidden md:block absolute -top-4 -left-8 w-[80px] h-[36px] scale-75">
           {tape}
@@ -19,8 +19,8 @@ export const Component = () => {
         <div className="hidden md:block absolute -top-4 -right-8 rotate-90 w-[80px] h-[36px] scale-75">
           {tape}
         </div>
-        <div className="flex flex-col md:flex-row items-start justify-between gap-4 md:gap-10 px-2 md:px-8 flex-1">
-          <div className='flex flex-col items-start gap-2'>
+        <div className="flex flex-col md:flex-row items-start justify-between gap-4 md:gap-10 px-2 md:px-8 flex-1 w-full">
+          <div className='flex flex-col items-start gap-2 w-full md:w-auto'>
             <Link
               href="/"
               className="flex flex-row gap-1 items-center justify-start text-2xl font-heading font-extrabold text-navy-dark"
@@ -28,56 +28,54 @@ export const Component = () => {
               <Image src="/logo.jpeg" alt="Shrestha IT" width={36} height={36} className="rounded-full object-cover" />
               Shrestha IT
             </Link>
-            <p className='text-gray-500 font-medium text-sm md:text-base w-full md:w-4/5'>Practical trading education in Indian Equity, Forex, Crypto, and F&O Derivatives. Learn from mentors, trade with confidence.</p>
+            <p className='text-gray-500 font-medium text-sm md:text-base w-full md:w-4/5'>Practical trading education in Indian Equity, Forex, Crypto, and F&O Derivatives.</p>
           </div>
 
-          <div className='flex flex-col md:mx-4 md:flex-row gap-2 md:gap-20 items-start md:items-start'>
+          <div className='flex flex-col sm:flex-row md:flex-row gap-4 sm:gap-6 md:gap-20 items-start w-full md:w-auto'>
 
             <div className='flex flex-col gap-1 md:gap-4'>
               <h4 className='uppercase font-heading text-md text-gray-500 font-semibold'>Quick Links</h4>
-              <div className="flex flex-wrap md:flex-col gap-2 text-sm items-start ">
-                <Link className='text-gray-500 hover:text-navy whitespace-nowrap font-medium transition-colors' href="/">Home</Link>
-                <Link className='text-gray-500 hover:text-navy whitespace-nowrap font-medium transition-colors' href="/about">About Us</Link>
-                <Link className='text-gray-500 hover:text-navy whitespace-nowrap font-medium transition-colors' href="/courses">Trading Courses</Link>
-                <Link className='text-gray-500 hover:text-navy whitespace-nowrap font-medium transition-colors' href="/contact">Contact & Enquiry</Link>
+              <div className="flex flex-col gap-2 text-sm items-start">
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/">Home</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/about">About Us</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses">Trading Courses</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/contact">Contact & Enquiry</Link>
               </div>
             </div>
 
             <div className='flex flex-col gap-1 md:gap-4'>
-              <h4 className='uppercase whitespace-nowrap font-heading text-md text-gray-500 font-semibold'>Trading Markets</h4>
-              <div className="flex gap-2 flex-wrap md:flex-col text-sm items-start ">
-                <Link className='text-gray-500 hover:text-navy whitespace-nowrap font-medium transition-colors' href="/courses">Indian Equity & Stocks</Link>
-                <Link className='text-gray-500 hover:text-navy whitespace-nowrap font-medium transition-colors' href="/courses">Forex Trading Mastery</Link>
-                <Link className='text-gray-500 hover:text-navy whitespace-nowrap font-medium transition-colors' href="/courses">Crypto Assets & Web3</Link>
-                <Link className='text-gray-500 hover:text-navy whitespace-nowrap font-medium transition-colors' href="/courses">F&O & Derivatives</Link>
+              <h4 className='uppercase font-heading text-md text-gray-500 font-semibold'>Trading Markets</h4>
+              <div className="flex flex-col gap-2 text-sm items-start">
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses">Indian Equity & Stocks</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses">Forex Trading Mastery</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses">Crypto Assets & Web3</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses">F&O & Derivatives</Link>
               </div>
             </div>
 
             <div className='flex flex-col gap-1 md:gap-4'>
-              <h4 className='uppercase whitespace-nowrap font-heading text-md text-gray-500 font-semibold'>Contact</h4>
-              <div className="flex flex-col gap-2 text-sm items-start ">
-                <a className='text-gray-500 hover:text-navy whitespace-nowrap font-medium transition-colors' href="tel:+919236666923">+91 9236666923</a>
-                <a className='text-gray-500 hover:text-navy whitespace-nowrap font-medium transition-colors' href="mailto:support@shresthaacademy.com">support@shrestha.com</a>
-                <span className='text-gray-500 whitespace-nowrap font-medium'>Uttam Nagar, New Delhi</span>
+              <h4 className='uppercase font-heading text-md text-gray-500 font-semibold'>Contact</h4>
+              <div className="flex flex-col gap-2 text-sm items-start">
+                <a className='text-gray-500 hover:text-navy font-medium transition-colors' href="tel:+919236666923">+91 9236666923</a>
+                <a className='text-gray-500 hover:text-navy font-medium transition-colors break-all' href="mailto:support@shresthaacademy.com">support@shrestha.com</a>
+                <span className='text-gray-500 font-medium'>Uttam Nagar, New Delhi</span>
               </div>
             </div>
           </div>
 
         </div>
       </div>
-      <div className="my-3 px-4 md:px-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-sm text-gray-600">
-        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center">
-          <p className="whitespace-nowrap">
-            &copy;{currentYear} Shrestha IT Academy. All rights reserved.
-          </p>
+      <div className="my-3 px-2 sm:px-4 md:px-8 flex flex-col items-center gap-4 text-sm text-gray-600">
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center text-center">
+          <p>&copy;{currentYear} Shrestha IT Academy</p>
           <span className="hidden sm:inline text-gray-400">|</span>
           <div className="flex flex-row gap-4">
-            <span className="hover:text-navy cursor-pointer transition-colors">Terms & Conditions</span>
-            <span className="hover:text-navy cursor-pointer transition-colors">Privacy Policy</span>
+            <span className="hover:text-navy cursor-pointer transition-colors">Terms</span>
+            <span className="hover:text-navy cursor-pointer transition-colors">Privacy</span>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
           <a
             href="https://groxmedia.in/"
             target="_blank"
