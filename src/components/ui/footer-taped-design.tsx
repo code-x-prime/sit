@@ -12,7 +12,7 @@ export const Component = () => {
 
   return (
     <footer className="my-8 px-4 max-w-7xl mx-auto">
-      <div className="relative bg-white rounded-3xl max-w-5xl mx-auto px-4 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="relative bg-white rounded-3xl max-w-5xl mx-auto px-4 sm:px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="hidden md:block absolute -top-4 -left-8 w-[80px] h-[36px] scale-75">
           {tape}
         </div>
