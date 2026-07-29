@@ -39,6 +39,7 @@ export const Component = () => {
                 <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/">Home</Link>
                 <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/about">About Us</Link>
                 <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses">Trading Courses</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/blog">Blogs</Link>
                 <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/contact">Contact & Enquiry</Link>
               </div>
             </div>
