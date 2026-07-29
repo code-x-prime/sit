@@ -22,28 +22,60 @@ import Image from "next/image";
 
 const newsCoverage = [
   {
-    name: "Times of India",
-    tagline: "Leading Daily Press",
-    image: "/toi_coverage.png",
-    desc: "Highlighted SIT's practical methodology and industry-ready mentorship for stock market aspirants.",
+    name: "The Tribune",
+    tagline: "Business & Startup Coverage",
+    logoImg: "/news/tribune-india.png",
+    link: "https://www.tribuneindia.com/news/business/most-eminent-startups-of-india-2026-2-2/",
+    desc: "Recognized among the Most Eminent Startups of India for practical trading education & mentorship excellence.",
   },
   {
-    name: "Economic Times",
-    tagline: "Financial Market Journal",
-    image: "/et_coverage.png",
-    desc: "Featured SIT as a premier academy empowering students with price action trading strategies.",
+    name: "ANI News",
+    tagline: "National News Wire",
+    logoImg: "/news/ani-news.png",
+    link: "https://www.aninews.in/news/business/most-eminent-startups-of-india-202620260506123233/",
+    desc: "Featured in ANI's national business release highlighting India's most prominent emerging startups.",
   },
   {
-    name: "Business Today",
-    tagline: "Business & Growth Feature",
-    image: "/bt_coverage.png",
-    desc: "Recognized SIT's comprehensive curriculum across Equity, F&O, Forex & Crypto trading.",
+    name: "Hindustan Times",
+    tagline: "Leading Daily Brand Feature",
+    logoImg: "/news/hindustan-times.png",
+    link: "https://www.hindustantimes.com/brand-stories/emerging-startups-shaping-india-s-business-landscape-in-2026-101778130531577.html#google_vignette",
+    desc: "Highlighted as an emerging startup shaping India's business & financial education landscape in 2026.",
   },
   {
-    name: "Zee News",
-    tagline: "Media & Broadcast Feature",
-    image: "/zee_coverage.png",
-    desc: "Covered SIT's ISO-certified excellence and real-time live market trading guidance.",
+    name: "The Wire",
+    tagline: "PTI Press Release Feature",
+    logoImg: "/news/the-wire.png",
+    link: "https://thewire.in/ptiprnews/most-eminent-startups-of-india-2026",
+    desc: "Featured in PTI PR news for pioneering stock market & financial literacy for Indian youth.",
+  },
+  {
+    name: "PTI News",
+    tagline: "Press Trust of India",
+    logoImg: "/news/pti-news.png",
+    link: "https://www.ptinews.com/press-release/most-eminent-startups-of-india-2026/3637566",
+    desc: "Covered by Press Trust of India in the official listing of India's most eminent startups.",
+  },
+  {
+    name: "Hindustan Metro",
+    tagline: "Education & Tech Feature",
+    logoImg: "/news/hindustan-metro.png",
+    link: "https://hindustanmetro.com/shrestha-it-bridging-the-gap-between-education-and-industry-in-india",
+    desc: "Shrestha IT: Bridging the Gap Between Education and Industry in India through practical skill development.",
+  },
+  {
+    name: "Entrepreneur Hunt",
+    tagline: "Startup & Innovation Portal",
+    logoImg: "/news/entrepreneur-hunt.png",
+    link: "https://entrepreneurhunt.com/shrestha-it-bridging-the-gap-between-education-and-industry-in-india",
+    desc: "In-depth story on how Shrestha IT is training next-gen traders with live market mentorship.",
+  },
+  {
+    name: "Dailyhunt",
+    tagline: "Digital News Network",
+    logoImg: "/news/dailyhunt.png",
+    link: "https://m.dailyhunt.in/news/india/english/punjabbytes-epaper-dhb7faabc774324241990251ac4336f653/-newsid-dhb7faabc774324241990251ac4336f653_1b410a006dc9438685405082386ba146?sm=Y",
+    desc: "Covered across regional & national feeds via PunjabBytes on Dailyhunt app.",
   },
 ];
 
@@ -245,38 +277,58 @@ export default function AboutPage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {newsCoverage.map((item, idx) => (
-                <div
+                <a
                   key={idx}
-                  className="group flex flex-col rounded-2xl border border-navy/10 dark:border-white/10 bg-card overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative flex flex-col justify-between rounded-2xl border border-navy/15 dark:border-white/15 bg-gradient-to-b from-white via-slate-50/50 to-slate-100/80 dark:from-navy-dark dark:via-navy/90 dark:to-navy overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-[#01488B]/40 dark:hover:border-amber/40 p-5"
                 >
-                  <div className="relative w-full aspect-[4/3] bg-white overflow-hidden border-b border-navy/5 dark:border-white/5">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
-                      unoptimized
-                    />
-                  </div>
-                  <div className="p-5 flex flex-col flex-1 justify-between bg-card">
+                  {/* Top Decorative Vintage Line/Accent */}
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy via-[#01488B] to-amber opacity-80 group-hover:opacity-100 transition-opacity" />
+
+                  <div className="space-y-4 pt-1">
+                    {/* Header with White Media Box & Press Tag */}
+                    <div className="flex items-center justify-between gap-2 border-b border-navy/10 dark:border-white/10 pb-3">
+                      <div className="relative h-12 w-36 rounded-xl bg-white p-2 border border-slate-200/80 shadow-inner flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                        <Image
+                          src={item.logoImg}
+                          alt={item.name}
+                          fill
+                          className="object-contain p-1"
+                          unoptimized
+                        />
+                      </div>
+                      <span className="text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full bg-navy/5 dark:bg-white/10 text-navy dark:text-amber border border-navy/10 dark:border-white/10 shrink-0">
+                        PRESS
+                      </span>
+                    </div>
+
+                    {/* Headline & Body */}
                     <div>
-                      <div className="flex items-center justify-between gap-2 mb-1.5">
-                        <h3 className="font-heading font-black text-base text-navy-dark dark:text-white group-hover:text-[#01488B] dark:group-hover:text-amber transition-colors">
+                      <div className="flex items-center justify-between gap-1 mb-1">
+                        <h3 className="font-heading font-black text-lg text-navy-dark dark:text-white group-hover:text-[#01488B] dark:group-hover:text-amber transition-colors leading-tight">
                           {item.name}
                         </h3>
-                        <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-navy-light dark:bg-navy/50 text-navy dark:text-amber">
-                          Featured
-                        </span>
+                        <IconArrowRight size={18} className="shrink-0 text-[#01488B] dark:text-amber opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
                       </div>
-                      <p className="text-xs font-bold text-navy/70 dark:text-amber/80 mb-2">
+                      <p className="text-xs font-bold text-navy/70 dark:text-amber/90 uppercase tracking-wider mb-2.5">
                         {item.tagline}
                       </p>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
-                        {item.desc}
+                      <p className="text-xs text-muted-foreground leading-relaxed italic border-l-2 border-amber/60 dark:border-amber/80 pl-2.5 py-0.5">
+                        &ldquo;{item.desc}&rdquo;
                       </p>
                     </div>
                   </div>
-                </div>
+
+                  {/* Newspaper Read Footer */}
+                  <div className="mt-5 pt-3 border-t border-navy/10 dark:border-white/10 flex items-center justify-between text-xs font-bold text-[#01488B] dark:text-amber">
+                    <span className="text-[11px] font-semibold text-muted-foreground whitespace-nowrap">Official Press</span>
+                    <span className="text-xs font-black tracking-wide whitespace-nowrap inline-flex items-center gap-1 text-[#01488B] dark:text-amber group-hover:translate-x-1 transition-transform">
+                      Read Article →
+                    </span>
+                  </div>
+                </a>
               ))}
             </div>
           </div>
@@ -383,25 +435,72 @@ export default function AboutPage() {
         <AnimatedSection className="py-10 md:py-12">
           <div className="rounded-3xl border border-navy/10 dark:border-white/10 bg-card p-6 sm:p-8 md:p-10 shadow-sm">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="relative flex items-center justify-center w-full max-w-md mx-auto aspect-[4/3] rounded-2xl overflow-hidden bg-white border border-navy/10 dark:border-white/10 p-2 shadow-sm group">
-                <Image
-                  src="/iso_certificate_illustration.png"
-                  alt="ISO Certified Excellence - SIT Trading Academy"
-                  fill
-                  className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
-                  unoptimized
-                />
+              
+              {/* Premium ISO Certificate Preview Frame */}
+              <div className="relative group w-full max-w-md mx-auto rounded-3xl overflow-hidden bg-gradient-to-b from-slate-900 via-navy-dark to-slate-950 p-4 border border-amber/30 shadow-2xl transition-transform duration-500 hover:-translate-y-1">
+                {/* Gold Seal Header Badge */}
+                <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-3 px-1">
+                  <div className="flex items-center gap-2">
+                    <div className="h-2.5 w-2.5 rounded-full bg-amber animate-pulse" />
+                    <span className="text-[11px] font-black tracking-wider text-amber uppercase">Official Registration</span>
+                  </div>
+                  <span className="text-[10px] font-bold text-white/70 bg-white/10 px-2 py-0.5 rounded-full border border-white/10">
+                    ISO 9001:2015
+                  </span>
+                </div>
+
+                {/* Certificate Render Container */}
+                <div className="relative w-full aspect-[1/1.3] rounded-2xl overflow-hidden bg-white shadow-inner border border-slate-200">
+                  <iframe
+                    src="https://pub-ea068395076f48558e674cdcaf6fd536.r2.dev/learning/general/1785338618145-iso-certificate.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
+                    title="Shrestha Edutech ISO 9001:2015 Certificate"
+                    className="w-full h-full border-0 pointer-events-none scale-105"
+                  />
+                  {/* Subtle Gradient Overlay on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
+                    <a
+                      href="https://pub-ea068395076f48558e674cdcaf6fd536.r2.dev/learning/general/1785338618145-iso-certificate.pdf"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-5 py-2.5 rounded-xl bg-amber text-navy font-black text-xs shadow-xl hover:scale-105 transition-transform flex items-center gap-2"
+                    >
+                      <span>View High Resolution PDF</span>
+                      <span>↗</span>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Bottom Action Footer */}
+                <div className="pt-3 flex items-center justify-between px-1">
+                  <span className="text-[11px] font-bold text-slate-300 truncate max-w-[220px]">
+                    No: UBML-QMS-0702026002
+                  </span>
+                  <a
+                    href="https://pub-ea068395076f48558e674cdcaf6fd536.r2.dev/learning/general/1785338618145-iso-certificate.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs font-black text-amber hover:underline flex items-center gap-1"
+                  >
+                    <span>Full Screen</span>
+                    <span>↗</span>
+                  </a>
+                </div>
               </div>
+
+              {/* Text Info Column */}
               <div className="space-y-4">
                 <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-navy/10 dark:border-white/10 bg-navy-light/60 dark:bg-navy/40 text-xs font-bold uppercase tracking-wider text-navy dark:text-amber">
                   <IconCertificate size={14} />
                   Exam & Certification
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-black text-navy-dark dark:text-white">
-                  ISO Certified Excellence
+                  ISO 9001:2015 Certified Excellence
                 </h2>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  SIT ensures that learners are future-ready by offering comprehensive exams to test their trading knowledge and skills. Upon successful completion, participants receive an ISO certification that self-validates their expertise in trading stocks, forex, and cryptocurrency, providing them with a competitive edge in the financial market.
+                  Shrestha Edutech Private Limited holds official ISO 9001:2015 Quality Management System Certification (Certificate No: <strong className="text-navy-dark dark:text-amber">UBML-QMS-0702026002</strong>) for Education and Skill Development Training.
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  SIT ensures that learners are future-ready by offering comprehensive exams to test their trading knowledge and skills. Upon successful completion, participants receive an ISO certification that validates their expertise in trading stocks, forex, and cryptocurrency.
                 </p>
                 <div className="p-4 rounded-2xl bg-navy/5 dark:bg-amber/10 border border-navy/10 dark:border-amber/20">
                   <p className="text-xs font-semibold text-navy dark:text-amber">

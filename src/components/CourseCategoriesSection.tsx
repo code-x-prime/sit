@@ -38,15 +38,16 @@ export interface CourseCategory {
 
 export const COURSES: CourseCategory[] = [
   {
-    id: "equity",
-    title: "Indian Equity Market Trading",
-    shortTitle: "Equity & Stocks",
-    categoryName: "NSE / BSE Equity",
+    id: "equity-derivatives",
+    title: "Indian Equity + Derivatives Market Trading",
+    shortTitle: "Equity & Derivatives Combo",
+    categoryName: "NSE / BSE Equity + F&O",
     duration: "2 Months",
     levels: "4 Levels (Minor, Major, Bachelor, Master)",
-    offlinePrice: "14,999",
-    onlinePrice: "9,999",
+    offlinePrice: "35,000",
+    onlinePrice: "35,000",
     discount: "10% OFF on One Shot Payment",
+    popular: true,
     icon: <IconTrendingUp className="w-6 h-6 text-white" />,
     headerBgIcon: <IconBuildingBank className="w-20 h-20 text-white" />,
     gradientHeader: "from-emerald-600 via-teal-600 to-[#0A2540]",
@@ -54,7 +55,27 @@ export const COURSES: CourseCategory[] = [
       "Chart & Price Data (How Candle works)",
       "Adv. SMC, FVG & Order Blocks",
       "Institutional Entry & Liquidity Strategy",
-      "Top-Down Metrics & Intraday Gaps/Traps",
+      "Futures & Options Buying/Selling Strategies",
+    ],
+  },
+  {
+    id: "derivatives",
+    title: "Indian Derivatives Market Trading",
+    shortTitle: "F&O & Options",
+    categoryName: "Futures & Options",
+    duration: "2 Months",
+    levels: "4 Levels (Minor, Major, Bachelor, Master)",
+    offlinePrice: "20,000",
+    onlinePrice: "20,000",
+    discount: "10% OFF on One Shot Payment",
+    icon: <IconChartCandle className="w-6 h-6 text-white" />,
+    headerBgIcon: <IconChartDots className="w-20 h-20 text-white" />,
+    gradientHeader: "from-rose-600 via-purple-600 to-[#0A2540]",
+    curriculum: [
+      "Futures & Forward Contracts Foundation",
+      "Options Buying & Selling Strategies",
+      "Quantitative Techniques & Risk Analytics",
+      "Master Trade Setup & Expiry Day Trades",
     ],
   },
   {
@@ -64,8 +85,8 @@ export const COURSES: CourseCategory[] = [
     categoryName: "Forex FX",
     duration: "2 Months",
     levels: "4 Levels (Forex FA, Next Gen, Alpha F, SIT)",
-    offlinePrice: "14,999",
-    onlinePrice: "9,999",
+    offlinePrice: "15,000",
+    onlinePrice: "15,000",
     discount: "10% OFF on One Shot Payment",
     icon: <IconWorld className="w-6 h-6 text-white" />,
     headerBgIcon: <IconWorld className="w-20 h-20 text-white" />,
@@ -84,8 +105,8 @@ export const COURSES: CourseCategory[] = [
     categoryName: "Crypto Assets",
     duration: "2 Months",
     levels: "4 Levels (Coins FA, Next Gen, Alpha Coin, SIT)",
-    offlinePrice: "14,999",
-    onlinePrice: "9,999",
+    offlinePrice: "15,000",
+    onlinePrice: "15,000",
     discount: "10% OFF on One Shot Payment",
     icon: <IconCoinBitcoin className="w-6 h-6 text-white" />,
     headerBgIcon: <IconCoinBitcoin className="w-20 h-20 text-white" />,
@@ -95,27 +116,6 @@ export const COURSES: CourseCategory[] = [
       "Market Cycles & Altcoin Strategy",
       "Leverage & Short Selling Mechanics",
       "Risk Management & Money Rewards",
-    ],
-  },
-  {
-    id: "derivatives",
-    title: "Indian Derivatives Market Trading",
-    shortTitle: "F&O & Options",
-    categoryName: "Futures & Options",
-    duration: "2 Months",
-    levels: "4 Levels (Minor, Major, Bachelor, Master)",
-    offlinePrice: "19,999",
-    onlinePrice: "14,999",
-    discount: "10% OFF on One Shot Payment",
-    popular: true,
-    icon: <IconChartCandle className="w-6 h-6 text-white" />,
-    headerBgIcon: <IconChartDots className="w-20 h-20 text-white" />,
-    gradientHeader: "from-rose-600 via-purple-600 to-[#0A2540]",
-    curriculum: [
-      "Futures & Forward Contracts Foundation",
-      "Options Buying & Selling Strategies",
-      "Quantitative Techniques & Risk Analytics",
-      "Master Trade Setup & Expiry Day Trades",
     ],
   },
 ];
@@ -152,52 +152,13 @@ export function CourseCategoriesSection({ showTitle = true }: CourseCategoriesSe
           </div>
         )}
 
-        {/* Interactive Learning Mode Toggle (Offline Campus vs Online Live) */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-3xl bg-card border border-navy/10 dark:border-white/10 shadow-sm max-w-2xl mx-auto">
-          <div className="text-center sm:text-left">
-            <span className="text-xs font-extrabold uppercase tracking-wider text-navy-dark dark:text-white block">
-              Choose Training Mode
-            </span>
-            <p className="text-[11px] text-muted-foreground">
-              {learningMode === "offline"
-                ? "Uttam Nagar, Delhi Campus (Includes Live Desk Access)"
-                : "Live Interactive Classes (Save up to ₹5,000 Special Online Discount)"}
-            </p>
-          </div>
-
-          <div className="flex items-center bg-navy-light/80 dark:bg-slate-800 p-1.5 rounded-2xl border border-navy/10 dark:border-white/10 shrink-0">
-            <button
-              onClick={() => setLearningMode("offline")}
-              className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 ${learningMode === "offline"
-                ? "bg-[#01488B] text-white shadow-md"
-                : "text-muted-foreground hover:text-foreground"
-                }`}
-            >
-              <IconMapPin className="w-4 h-4" />
-              <span>Offline Campus</span>
-            </button>
-            <button
-              onClick={() => setLearningMode("online")}
-              className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 ${learningMode === "online"
-                ? "bg-amber text-navy shadow-md"
-                : "text-muted-foreground hover:text-foreground"
-                }`}
-            >
-              <IconDeviceLaptop className="w-4 h-4" />
-              <span>Online Live</span>
-            </button>
-          </div>
-        </div>
-
         {/* 4 Main Segment Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {COURSES.map((course) => {
             const isPopular = course.popular;
             const isSelected = selectedCourse === course.id;
-            const activePrice = learningMode === "offline" ? course.offlinePrice : course.onlinePrice;
-            const activeModeLabel = learningMode === "offline" ? "OFFLINE Campus" : "ONLINE Live";
 
-            const whatsappMsg = `Hi Shrestha IT, I want to enroll in the ${course.title} ${activeModeLabel} Batch (₹${activePrice}, 2 Months, 4 Levels). Please share admission & payment details.`;
+            const whatsappMsg = `Hi Shrestha IT, I want to enroll in the ${course.title} (₹${course.offlinePrice}, 2 Months, 4 Levels). Please share admission & batch details for Online/Offline.`;
 
             return (
               <div
@@ -260,6 +221,18 @@ export function CourseCategoriesSection({ showTitle = true }: CourseCategoriesSe
                     <span>{course.levels}</span>
                   </p>
 
+                  {/* Highlighted Batches Badge (Offline + Online) */}
+                  <div className="mb-4 flex items-center gap-2 p-2 rounded-xl bg-navy-light/60 dark:bg-navy/50 border border-navy/10 dark:border-white/10">
+                    <div className="flex-1 flex items-center justify-center gap-1 py-1 rounded-lg bg-white dark:bg-navy/80 text-[10px] font-extrabold text-[#01488B] dark:text-amber shadow-xs border border-navy/5">
+                      <IconMapPin className="w-3 h-3 text-[#01488B] dark:text-amber" />
+                      <span>Offline Campus</span>
+                    </div>
+                    <div className="flex-1 flex items-center justify-center gap-1 py-1 rounded-lg bg-white dark:bg-navy/80 text-[10px] font-extrabold text-amber-600 dark:text-amber shadow-xs border border-navy/5">
+                      <IconDeviceLaptop className="w-3 h-3 text-amber-500" />
+                      <span>Online Live</span>
+                    </div>
+                  </div>
+
                   {/* Curriculum Highlights List */}
                   <div className="space-y-2 mb-6 border-t border-navy/5 dark:border-white/5 pt-4">
                     <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider block mb-2">
@@ -274,25 +247,25 @@ export function CourseCategoriesSection({ showTitle = true }: CourseCategoriesSe
                   </div>
                 </div>
 
-                {/* Dynamic Price & Single Full-Width WhatsApp Enroll Button */}
-                <div className="border-t border-navy/10 dark:border-white/10 pt-5 space-y-4">
+                {/* Price Display & WhatsApp Button */}
+                <div className="border-t border-navy/10 dark:border-white/10 pt-4 space-y-3">
                   <div className="flex items-baseline justify-between">
                     <div>
                       <div className="flex items-center text-2xl font-black text-navy-dark dark:text-white font-heading">
                         <IconCurrencyRupee className="w-5 h-5 -mr-0.5 text-navy dark:text-amber" />
-                        <span>{activePrice}</span>
+                        <span>{course.offlinePrice}</span>
                       </div>
                       <span className="text-[10px] text-muted-foreground block font-semibold">
-                        {learningMode === "offline" ? "Delhi Campus Batch" : "Online Live Interactive"}
+                        Offline & Online Batch Fee
                       </span>
                     </div>
                     <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
                       <IconTag className="w-3 h-3" />
-                      {learningMode === "offline" ? "10% OFF" : "SAVE ₹5,000"}
+                      10% OFF
                     </span>
                   </div>
 
-                  {/* Single Clean Full-Width WhatsApp Enroll Button (No Details Button) */}
+                  {/* WhatsApp Enroll Button */}
                   <a
                     href={`https://wa.me/919236666923?text=${encodeURIComponent(whatsappMsg)}`}
                     target="_blank"

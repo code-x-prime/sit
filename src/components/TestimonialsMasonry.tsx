@@ -11,6 +11,7 @@ interface TestimonialTextCard {
   name: string;
   role: string;
   location: string;
+  rating: number;
   text: string;
   highlight?: string;
 }
@@ -28,81 +29,98 @@ type TestimonialCard = TestimonialTextCard | TestimonialImageCard;
 const column1: TestimonialCard[] = [
   {
     type: "image",
-    image: "/testimonial_video_amit.png",
-    title: "How Amit Sharma Cracked Bank Nifty F&O Trading",
-    company: "SIT Delhi Center",
-    videoSrc: "/hero-video.mp4",
+    image: "/testimonials/Anas Khan-Indian Equity Trader.jpeg",
+    title: "How Anas Khan Achieved 80%+ Accuracy in Equity Trading",
+    company: "Anas Khan - SIT Student Story",
+    videoSrc: "https://pub-ea068395076f48558e674cdcaf6fd536.r2.dev/learning/general/1785339239015-whatsapp-video-2026-07-28-at-6.33.28-pm.mp4",
   },
   {
     type: "text",
-    avatar: "/avatar_amit.png",
-    name: "Amit Sharma",
-    role: "F&O Trader",
-    location: "Uttam Nagar, Delhi",
-    text: "Bhai, simple words me bolu toh Shrestha IT best hai. Classes bahot interactive hain aur live market me trade karna seekha diya. Mera loss-making phase ab over ho chuka hai!",
-    highlight: "Mera overall confidence double ho gaya live options trading desk par.",
+    avatar: "/testimonials/Anas Khan-Indian Equity Trader.jpeg",
+    name: "Anas Khan",
+    role: "Indian Equity Trader",
+    location: "Delhi NCR",
+    rating: 5,
+    text: "Shrestha IT ka practical market approach mindblowing hai! Live market sessions me candle chart setup aur SMC liquidity traps seekhe. Equity trading me mera accuracy rate 80%+ ho chuka hai.",
+    highlight: "SMC concepts aur risk-to-reward ratio ne mere equity trades ko completely transform kar diya.",
   },
   {
     type: "text",
-    avatar: "/avatar_vikram.png",
-    name: "Vikram Malhotra",
-    role: "Swing Trader",
-    location: "Bangalore",
-    text: "SIT lectures build from absolute basics. Being from a non-commerce background, I was worried, but the mentors made technical chart analysis very simple to understand.",
+    avatar: "/testimonials/Manish Shrivastav-Indian option trader.jpeg",
+    name: "Manish Shrivastav",
+    role: "Indian Option Trader",
+    location: "Noida, UP",
+    rating: 5,
+    text: "Options buying me regular losses ke baad maine SIT join kiya tha. Mentors ne risk management aur option greeks hedging setup ko clear karwaya. Highly recommended for Option traders!",
   },
 ];
 
 const column2: TestimonialCard[] = [
   {
     type: "text",
-    avatar: "/avatar_sanjay.png",
-    name: "Sanjay Singh",
-    role: "Equity Investor",
-    location: "Noida, UP",
-    text: "Market analysis and indicators setup ko deeply samjhaya gaya. The risk management strategy taught here saved my portfolio from major drawdown. Highly recommended!",
+    avatar: "/testimonials/azhar- crypto trader.jpeg",
+    name: "Azhar Sheikh",
+    role: "Crypto & Derivatives Trader",
+    location: "Lucknow, UP",
+    rating: 5,
+    text: "Crypto market volatility ko manage karna aur leverage short-selling techniques SIT ke live trading lab me seekhi. Faculty support superb hai, continuous doubt clearing sessions milte hain.",
+    highlight: "Real-time market analysis aur 1-on-1 mentorship se trading mindset ekdum solid ho gaya.",
   },
   {
     type: "text",
-    avatar: "/avatar_priya.png",
-    name: "Priya Patel",
-    role: "Forex Specialist",
-    location: "Andheri West, Mumbai",
-    text: "I joined the Forex Mastery program here. The mentor support is amazing! Live sessions clear all doubts instantly. Now trading with confidence in global currency pairs.",
-    highlight: "Daily market tracking aur real-time guidance ne live currency charts analysis clear kr diya.",
+    avatar: "/testimonials/Pawan yadav-indian option trader.jpeg",
+    name: "Pawan Yadav",
+    role: "Indian Option Trader",
+    location: "Delhi Campus",
+    rating: 5,
+    text: "Offline campus training environment best hai! Live index desk par mentors ke saath real-time Nifty & Bank Nifty levels identify karke options trade execution seekha.",
   },
   {
     type: "text",
-    avatar: "/avatar_rahul.png",
-    name: "Rahul Verma",
-    role: "Derivatives Trader",
-    location: "Kanpur, UP",
-    text: "F&O and Derivatives training is top-notch. Real-time market analysis examples helpful hain. Special thanks to the support team for constant guidance and live doubts resolution!",
+    avatar: "/testimonials/Rahul Vishwakarma- Crypto trader.jpeg",
+    name: "Rahul Vishwakarma",
+    role: "Crypto Trader",
+    location: "Banaras, UP",
+    rating: 5,
+    text: "Spot & futures trading in crypto setups simple tarike se explain kiye gaye. Risk capital protection strategy ki wajah se mere loss trades zero ke barabar ho gaye hain.",
   },
 ];
 
 const column3: TestimonialCard[] = [
   {
     type: "text",
-    avatar: "/avatar_rajesh.png",
-    name: "Rajesh Kumar",
-    role: "Commodity Trader",
-    location: "Patna, Bihar",
-    text: "Classes start basic se hoti hain, and instructors provide real case studies. The mentorship after the course is what sets Shrestha IT apart from other academies.",
+    avatar: "/testimonials/Rajat-Forex Trader.jpeg",
+    name: "Rajat Verma",
+    role: "Forex FX Trader",
+    location: "Chandigarh",
+    rating: 5,
+    text: "Global Forex pairs MT4/MT5 setup, PIP spreads aur economic calendar events ka drop analysis SIT ne exact sikha diya. Forex live mentorship desk unmatched hai!",
   },
   {
     type: "image",
-    image: "/testimonial_video_priya.png",
-    title: "From Zero to Consistent Weekly Income in Forex",
-    company: "SIT Mumbai Center",
-    videoSrc: "/hero-video.mp4",
+    image: "/testimonials/Sneha Juneja- Crypto trader.jpeg",
+    title: "How Sneha Juneja Mastered Crypto & Web3 Derivatives",
+    company: "Sneha Juneja - SIT Student Story",
+    videoSrc: "https://pub-ea068395076f48558e674cdcaf6fd536.r2.dev/learning/general/1785339215703-whatsapp-video-2026-07-23-at-6.24.39-pm.mp4",
   },
   {
     type: "text",
-    avatar: "/avatar_neha.png",
-    name: "Neha Gupta",
-    role: "Technical Analyst",
-    location: "Pune",
-    text: "Trading software parameters and price action setup ko sahi se use karna seekha. Live practice sessions in the computer lab helped me build proper setups on my trading platform.",
+    avatar: "/testimonials/saif qadri- Indian equity trader.jpeg",
+    name: "Saif Qadri",
+    role: "Indian Equity Trader",
+    location: "Jaipur, Rajasthan",
+    rating: 5,
+    text: "Basic candle reading se lekar advanced institutional SMC breakout setups tak shuru se end tak practical practical training mili. Offline lab and live desk access is gold!",
+  },
+  {
+    type: "text",
+    avatar: "/testimonials/Sneha Juneja- Crypto trader.jpeg",
+    name: "Sneha Juneja",
+    role: "Crypto & Web3 Trader",
+    location: "Gurugram, HR",
+    rating: 5,
+    text: "Being a woman trader, I was looking for authentic 1-on-1 mentorship. SIT mentors made crypto derivatives & altcoin cycle trading crystal clear with zero confusion.",
+    highlight: "Disciplined psychology and risk management model taught at SIT changed my whole approach.",
   },
 ];
 
@@ -168,13 +186,13 @@ export function TestimonialsMasonry() {
         />
 
         {/* User profile row */}
-        <div className="flex items-center gap-3.5 mb-6">
-          <div className="relative h-11 w-11 rounded-full overflow-hidden border-2 border-navy/10 dark:border-white/10 bg-muted shrink-0">
+        <div className="flex items-center gap-3.5 mb-4">
+          <div className="relative h-14 w-14 rounded-2xl overflow-hidden border-2 border-[#01488B]/30 dark:border-amber/40 bg-slate-100 dark:bg-slate-800 shrink-0 shadow-md">
             <Image
               src={card.avatar}
               alt={card.name}
               fill
-              className="object-cover"
+              className="object-cover object-top p-0.5 rounded-xl"
               unoptimized
             />
           </div>
@@ -182,10 +200,20 @@ export function TestimonialsMasonry() {
             <h5 className="font-bold text-base text-navy-dark dark:text-white leading-none mb-1">
               {card.name}
             </h5>
-            <p className="text-xs font-medium text-muted-foreground">
-              {card.role}, {card.location}
+            <p className="text-xs font-semibold text-navy/70 dark:text-amber/90">
+              {card.role} • <span className="text-muted-foreground font-normal">{card.location}</span>
             </p>
           </div>
+        </div>
+
+        {/* 5-Star Rating */}
+        <div className="flex items-center gap-1 mb-4">
+          {[...Array(card.rating || 5)].map((_, i) => (
+            <span key={i} className="text-amber text-sm font-bold">★</span>
+          ))}
+          <span className="text-[10px] font-extrabold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 ml-1">
+            VERIFIED TRADER
+          </span>
         </div>
 
         {/* Testimonial text details */}
