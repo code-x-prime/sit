@@ -126,7 +126,6 @@ interface CourseCategoriesSectionProps {
 
 export function CourseCategoriesSection({ showTitle = true }: CourseCategoriesSectionProps) {
   const [selectedCourse, setSelectedCourse] = useState<string>("derivatives");
-  const [learningMode, setLearningMode] = useState<"offline" | "online">("offline");
 
   return (
     <section className="relative w-full py-8 md:py-16 bg-transparent overflow-hidden">
@@ -318,7 +317,7 @@ export function CourseCategoriesSection({ showTitle = true }: CourseCategoriesSe
 
                 <a
                   href={`https://wa.me/919236666923?text=${encodeURIComponent(
-                    `Hi Shrestha IT, I want to enroll in the Forex + Crypto Combo Bundle (₹24,999 RS, 3+ Months, ${learningMode.toUpperCase()} Mode). Please share admission details.`
+                    "Hi Shrestha IT, I want to enroll in the Forex + Crypto Combo Bundle (₹24,999 RS, 3+ Months Online/Offline). Please share admission details."
                   )}`}
                   target="_blank"
                   rel="noreferrer"
@@ -346,7 +345,7 @@ export function CourseCategoriesSection({ showTitle = true }: CourseCategoriesSe
 
                 <a
                   href={`https://wa.me/919236666923?text=${encodeURIComponent(
-                    `Hi Shrestha IT, I want to enroll in the All-Segment Master Bundle (₹29,999 RS, All Segments Included, ${learningMode.toUpperCase()} Mode). Please share admission details.`
+                    "Hi Shrestha IT, I want to enroll in the All-Segment Master Bundle (₹29,999 RS, All Segments Included Online/Offline). Please share admission details."
                   )}`}
                   target="_blank"
                   rel="noreferrer"

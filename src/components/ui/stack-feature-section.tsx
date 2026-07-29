@@ -115,10 +115,13 @@ export default function FeatureSection({
                           height: "2.25rem",
                         }}
                       >
-                        <img
+                        <Image
                           src={logo.src}
                           alt={logo.alt}
+                          width={36}
+                          height={36}
                           className="w-full h-full object-contain p-0.5"
+                          unoptimized
                         />
                       </div>
                     );
