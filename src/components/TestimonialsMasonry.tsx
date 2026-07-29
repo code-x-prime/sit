@@ -101,7 +101,7 @@ const column3: TestimonialCard[] = [
     image: "/testimonials/Sneha Juneja- Crypto trader.jpeg",
     title: "How Sneha Juneja Mastered Crypto & Web3 Derivatives",
     company: "Sneha Juneja - SIT Student Story",
-    videoSrc: "https://pub-ea068395076f48558e674cdcaf6fd536.r2.dev/learning/general/1785339215703-whatsapp-video-2026-07-23-at-6.24.39-pm.mp4",
+    videoSrc: "https://pub-ea068395076f48558e674cdcaf6fd536.r2.dev/learning/general/1785342408539-whatsapp-video-2026-07-26-at-10.57.10-am.mp4",
   },
   {
     type: "text",
