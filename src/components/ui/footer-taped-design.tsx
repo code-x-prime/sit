@@ -47,10 +47,10 @@ export const Component = () => {
             <div className='flex flex-col gap-1 md:gap-4'>
               <h4 className='uppercase font-heading text-md text-gray-500 font-semibold'>Trading Markets</h4>
               <div className="flex flex-col gap-2 text-sm items-start">
-                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses">Indian Equity & Stocks</Link>
-                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses">Forex Trading Mastery</Link>
-                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses">Crypto Assets & Web3</Link>
-                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses">F&O & Derivatives</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/equity-derivatives">Indian Equity & Stocks</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/forex">Forex Trading Mastery</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/crypto">Crypto Assets & Web3</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/derivatives">F&O & Derivatives</Link>
               </div>
             </div>
 

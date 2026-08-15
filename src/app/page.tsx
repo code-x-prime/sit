@@ -58,14 +58,16 @@ export default function HomePage() {
                     <TradingBeamSection />
                 </AnimatedSection>
 
+                <AnimatedSection>
+                    <TestimonialsSection />
+                </AnimatedSection>
+
                 {/* Categorized FAQ Component Integration */}
                 <AnimatedSection>
                     <CategorizedFaq />
                 </AnimatedSection>
 
-                <AnimatedSection>
-                    <TestimonialsSection />
-                </AnimatedSection>
+
 
                 <AnimatedSection>
                     <FeatureSection />
