@@ -136,14 +136,14 @@ export function StatsArcSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full py-12 md:py-20 overflow-hidden"
+      className="relative w-full py-12  overflow-hidden"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
-          
+
           {/* LEFT COLUMN: Eyebrow + Illustration + Hero Title + Body + CTA */}
           <div ref={leftColRef} className="lg:col-span-5 flex flex-col items-start space-y-6">
-            
+
             {/* Tag / Eyebrow */}
             <div className="inline-flex items-center gap-2 rounded-full border border-navy/10 dark:border-white/10 bg-emerald-500/10 px-3.5 py-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -153,11 +153,11 @@ export function StatsArcSection() {
             {/* Trading Line Art Illustration (Left Image) */}
             <div className="relative w-full max-w-[420px] aspect-[4/3] rounded-3xl overflow-hidden border border-navy/10 dark:border-white/10 bg-white dark:bg-card p-4 shadow-sm backdrop-blur-xs group">
               <Image
-                src="/trading_community_illustration.png"
-                alt="Trading Community Illustration"
+                src="/trading_community_photo.jpeg"
+                alt="Shrestha IT trading community members at a mentorship meetup"
                 fill
                 priority
-                className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
 
@@ -186,10 +186,10 @@ export function StatsArcSection() {
 
           {/* RIGHT COLUMN: Masonry Pastel Stat Cards (6 Cards in 2 Columns) */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-            
+
             {/* Column 1 */}
             <div className="space-y-4 sm:space-y-5">
-              
+
               {/* Card 1: Pastel Pink */}
               <StatCard
                 value="7+"
@@ -230,7 +230,7 @@ export function StatsArcSection() {
 
             {/* Column 2 (Offsetted layout like Surfe reference) */}
             <div className="space-y-4 sm:space-y-5 sm:pt-6">
-              
+
               {/* Card 4: Pastel Yellow */}
               <StatCard
                 value="4.9/5"

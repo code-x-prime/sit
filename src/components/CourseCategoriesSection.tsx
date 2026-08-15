@@ -1,130 +1,29 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
-  IconTrendingUp,
-  IconWorld,
-  IconCoinBitcoin,
-  IconChartCandle,
   IconCheck,
   IconSparkles,
   IconClock,
-  IconTag,
   IconCurrencyRupee,
+  IconArrowRight,
   IconRosetteDiscountCheck,
-  IconChartDots,
-  IconBuildingBank,
   IconBrandWhatsapp,
   IconDeviceLaptop,
   IconMapPin,
 } from "@tabler/icons-react";
+import Image from "next/image";
+import { COURSES, type CourseCategory } from "@/lib/courses-data";
 
-export interface CourseCategory {
-  id: string;
-  title: string;
-  shortTitle: string;
-  categoryName: string;
-  duration: string;
-  levels: string;
-  offlinePrice: string;
-  onlinePrice: string;
-  discount: string;
-  popular?: boolean;
-  icon: React.ReactNode;
-  headerBgIcon: React.ReactNode;
-  gradientHeader: string;
-  curriculum: string[];
-}
-
-export const COURSES: CourseCategory[] = [
-  {
-    id: "equity-derivatives",
-    title: "Indian Equity + Derivatives Market Trading",
-    shortTitle: "Equity & Derivatives Combo",
-    categoryName: "NSE / BSE Equity + F&O",
-    duration: "2 Months",
-    levels: "4 Levels (Minor, Major, Bachelor, Master)",
-    offlinePrice: "35,000",
-    onlinePrice: "35,000",
-    discount: "10% OFF on One Shot Payment",
-    popular: true,
-    icon: <IconTrendingUp className="w-6 h-6 text-white" />,
-    headerBgIcon: <IconBuildingBank className="w-20 h-20 text-white" />,
-    gradientHeader: "from-emerald-600 via-teal-600 to-[#0A2540]",
-    curriculum: [
-      "Chart & Price Data (How Candle works)",
-      "Adv. SMC, FVG & Order Blocks",
-      "Institutional Entry & Liquidity Strategy",
-      "Futures & Options Buying/Selling Strategies",
-    ],
-  },
-  {
-    id: "derivatives",
-    title: "Indian Derivatives Market Trading",
-    shortTitle: "F&O & Options",
-    categoryName: "Futures & Options",
-    duration: "2 Months",
-    levels: "4 Levels (Minor, Major, Bachelor, Master)",
-    offlinePrice: "20,000",
-    onlinePrice: "20,000",
-    discount: "10% OFF on One Shot Payment",
-    icon: <IconChartCandle className="w-6 h-6 text-white" />,
-    headerBgIcon: <IconChartDots className="w-20 h-20 text-white" />,
-    gradientHeader: "from-rose-600 via-purple-600 to-[#0A2540]",
-    curriculum: [
-      "Futures & Forward Contracts Foundation",
-      "Options Buying & Selling Strategies",
-      "Quantitative Techniques & Risk Analytics",
-      "Master Trade Setup & Expiry Day Trades",
-    ],
-  },
-  {
-    id: "forex",
-    title: "Forex Market Trading",
-    shortTitle: "Global Currencies",
-    categoryName: "Forex FX",
-    duration: "2 Months",
-    levels: "4 Levels (Forex FA, Next Gen, Alpha F, SIT)",
-    offlinePrice: "15,000",
-    onlinePrice: "15,000",
-    discount: "10% OFF on One Shot Payment",
-    icon: <IconWorld className="w-6 h-6 text-white" />,
-    headerBgIcon: <IconWorld className="w-20 h-20 text-white" />,
-    gradientHeader: "from-[#01488B] via-blue-600 to-[#0F172A]",
-    curriculum: [
-      "MetaTrader 4 & PIP / Spread Mechanics",
-      "Fundamental, Technical & Sentiment Analysis",
-      "Short Selling & Economic Calendar",
-      "Educational Trading & Group Mentorship",
-    ],
-  },
-  {
-    id: "crypto",
-    title: "Cryptocurrency Market Trading",
-    shortTitle: "Crypto & Web3",
-    categoryName: "Crypto Assets",
-    duration: "2 Months",
-    levels: "4 Levels (Coins FA, Next Gen, Alpha Coin, SIT)",
-    offlinePrice: "15,000",
-    onlinePrice: "15,000",
-    discount: "10% OFF on One Shot Payment",
-    icon: <IconCoinBitcoin className="w-6 h-6 text-white" />,
-    headerBgIcon: <IconCoinBitcoin className="w-20 h-20 text-white" />,
-    gradientHeader: "from-amber-500 via-amber-600 to-[#0F172A]",
-    curriculum: [
-      "Crypto Currency Pairs & Blockchain Basics",
-      "Market Cycles & Altcoin Strategy",
-      "Leverage & Short Selling Mechanics",
-      "Risk Management & Money Rewards",
-    ],
-  },
-];
+export { COURSES, type CourseCategory };
 
 interface CourseCategoriesSectionProps {
   showTitle?: boolean;
 }
 
 export function CourseCategoriesSection({ showTitle = true }: CourseCategoriesSectionProps) {
+  const router = useRouter();
   const [selectedCourse, setSelectedCourse] = useState<string>("derivatives");
 
   return (
@@ -162,8 +61,17 @@ export function CourseCategoriesSection({ showTitle = true }: CourseCategoriesSe
             return (
               <div
                 key={course.id}
+                role="link"
+                tabIndex={0}
+                onClick={() => router.push(`/courses/${course.id}`)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    router.push(`/courses/${course.id}`);
+                  }
+                }}
                 onMouseEnter={() => setSelectedCourse(course.id)}
-                className={`group relative flex flex-col justify-between p-5 rounded-3xl border transition-all duration-300 ${isSelected
+                className={`group relative flex flex-col justify-between p-5 rounded-3xl border transition-all duration-300 cursor-pointer ${isSelected
                   ? "border-[#01488B] dark:border-amber bg-card shadow-2xl scale-[1.02] z-20"
                   : "border-navy/10 dark:border-white/10 bg-card/70 dark:bg-card/40 shadow-sm hover:shadow-md"
                   }`}
@@ -179,6 +87,14 @@ export function CourseCategoriesSection({ showTitle = true }: CourseCategoriesSe
                 <div>
                   {/* Premium Course Card Visual Header */}
                   <div className={`relative w-full h-36 rounded-2xl overflow-hidden bg-gradient-to-br ${course.gradientHeader} p-4 flex flex-col justify-between mb-4 shadow-md transition-transform duration-500 group-hover:scale-[1.02]`}>
+                    <Image
+                      src={course.image}
+                      alt={course.imageAlt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 25vw"
+                      className="object-cover opacity-40 mix-blend-overlay pointer-events-none"
+                      priority={isPopular}
+                    />
                     <div className="absolute -right-4 -bottom-4 w-28 h-28 rounded-full bg-white/10 blur-xl pointer-events-none" />
                     <div className="absolute right-2 top-2 opacity-20 transform rotate-12 group-hover:rotate-0 transition-transform duration-500">
                       {course.headerBgIcon}
@@ -246,33 +162,24 @@ export function CourseCategoriesSection({ showTitle = true }: CourseCategoriesSe
                   </div>
                 </div>
 
-                {/* Price Display & WhatsApp Button */}
-                <div className="border-t border-navy/10 dark:border-white/10 pt-4 space-y-3">
-                  <div className="flex items-baseline justify-between">
-                    <div>
-                      <div className="flex items-center text-2xl font-black text-navy-dark dark:text-white font-heading">
-                        <IconCurrencyRupee className="w-5 h-5 -mr-0.5 text-navy dark:text-amber" />
-                        <span>{course.offlinePrice}</span>
-                      </div>
-                      <span className="text-[10px] text-muted-foreground block font-semibold">
-                        Offline & Online Batch Fee
-                      </span>
-                    </div>
-                    <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
-                      <IconTag className="w-3 h-3" />
-                      10% OFF
-                    </span>
-                  </div>
+                {/* CTA */}
+                <div className="border-t border-navy/10 dark:border-white/10 pt-4 space-y-2">
+                  <span className="relative w-full py-3 px-4 rounded-xl bg-[#01488B] dark:bg-amber text-white dark:text-navy-dark text-xs font-bold flex items-center justify-center gap-1.5 shadow-md shadow-[#01488B]/20 dark:shadow-amber/20 transition-all duration-300 overflow-hidden group-hover:shadow-lg group-hover:shadow-[#01488B]/30 dark:group-hover:shadow-amber/30 group-hover:-translate-y-0.5">
+                    <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out" />
+                    <span className="relative">View Details &amp; Syllabus</span>
+                    <IconArrowRight className="relative w-3.5 h-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
 
                   {/* WhatsApp Enroll Button */}
                   <a
                     href={`https://wa.me/919236666923?text=${encodeURIComponent(whatsappMsg)}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md transition duration-300 hover:scale-[1.02]"
+                    onClick={(e) => e.stopPropagation()}
+                    className="w-full py-2.5 px-4 rounded-xl bg-emerald-500/10 border border-emerald-600/30 dark:border-emerald-400/25 text-emerald-700 dark:text-emerald-400 text-xs font-bold flex items-center justify-center gap-2 transition-all duration-300 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 hover:-translate-y-0.5"
                   >
-                    <IconBrandWhatsapp className="w-4 h-4 text-white shrink-0" />
-                    <span>Enroll on WhatsApp</span>
+                    <IconBrandWhatsapp className="w-4 h-4 shrink-0" />
+                    <span>Quick Enquiry on WhatsApp</span>
                   </a>
                 </div>
               </div>

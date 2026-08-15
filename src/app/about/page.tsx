@@ -3,8 +3,8 @@
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { MinimalHero } from "@/components/ui/hero-minimalism";
 import { CategorizedFaq } from "@/components/ui/faq-categorized";
-import { VerticalTabs } from "@/components/ui/vertical-tabs";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { PhotoGallery } from "@/components/PhotoGallery";
 import {
   IconTarget,
   IconEye,
@@ -334,11 +334,17 @@ export default function AboutPage() {
           </div>
         </AnimatedSection>
 
-        {/* Course Curriculum Section - Using Vertical Tabs */}
+        {/* Real Campus Photo Gallery */}
         <AnimatedSection className="py-10 md:py-12">
-          <VerticalTabs
-            heading="Course Curriculum"
-            subheading="(OUR TRADING MODULES)"
+          <PhotoGallery
+            eyebrow="Inside Our Campus"
+            title={
+              <>
+                A Look Inside <span className="text-[#01488B] dark:text-amber">Shrestha IT</span>
+              </>
+            }
+            description="From live mentor-led trading sessions to certificate ceremonies and national media features — here's what training at our Delhi campus actually looks like."
+            showCta={false}
           />
         </AnimatedSection>
 

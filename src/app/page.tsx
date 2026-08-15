@@ -1,24 +1,25 @@
 
 import { AnimatedSection } from "@/components/AnimatedSection"
-import { HeroSectionDemo } from "@/components/blocks/hero-section-demo"
+// import { HeroSectionDemo } from "@/components/blocks/hero-section-demo"
+import { CourseHeroCarousel } from "@/components/CourseHeroCarousel"
 
 import { StatsArcSection } from "@/components/StatsArcSection"
 import FeatureSection from "@/components/ui/stack-feature-section"
-import { TestimonialsMasonry } from "@/components/TestimonialsMasonry"
+import { TestimonialsSection } from "@/components/ui/testimonials-section"
 import { TradingBeamSection } from "@/components/TradingBeamSection"
 
-import { VerticalTabs } from "@/components/ui/vertical-tabs"
 import { CategorizedFaq } from "@/components/ui/faq-categorized"
+import { PhotoGallery } from "@/components/PhotoGallery"
 
 
-import { ScrollingAnimation } from "@/components/ui/scrolling-animation"
 import { CourseCategoriesSection } from "@/components/CourseCategoriesSection"
 import { LogoCloud } from "@/components/ui/logo-cloud-2"
 
 export default function HomePage() {
     return (
         <>
-            <HeroSectionDemo />
+            {/* <HeroSectionDemo /> */}
+            <CourseHeroCarousel />
             <main className="mx-auto max-w-7xl px-4 sm:px-6">
 
                 <StatsArcSection />
@@ -43,21 +44,14 @@ export default function HomePage() {
                     </div>
                 </AnimatedSection>
 
-                {/* Vertical Tabs Component Integration */}
+                {/* Photo Gallery Showcase */}
                 <AnimatedSection>
-                    <VerticalTabs
-                        heading="Built for Practical Trading Success"
-                        subheading="(OUR TRADING MODULES)"
-                    />
+                    <PhotoGallery />
                 </AnimatedSection>
 
                 {/* Official SIT Course Categories & Pricing Section */}
                 <AnimatedSection>
                     <CourseCategoriesSection />
-                </AnimatedSection>
-
-                <AnimatedSection>
-                    <ScrollingAnimation />
                 </AnimatedSection>
 
                 <AnimatedSection>
@@ -70,7 +64,7 @@ export default function HomePage() {
                 </AnimatedSection>
 
                 <AnimatedSection>
-                    <TestimonialsMasonry />
+                    <TestimonialsSection />
                 </AnimatedSection>
 
                 <AnimatedSection>

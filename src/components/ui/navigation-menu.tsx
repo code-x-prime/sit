@@ -1,212 +1,113 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { motion, useScroll, useMotionValueEvent, type Variants } from "framer-motion";
-import { Menu } from "lucide-react";
-
+import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { cn } from "@/lib/utils";
 
-const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Courses", href: "/courses" },
-  { name: "Contact", href: "/contact" },
-];
-
-const EXPAND_SCROLL_THRESHOLD = 80;
-
-const containerVariants: Variants = {
-  expanded: {
-    y: 0,
-    opacity: 1,
-    width: "100%",
-    transition: {
-      y: { type: "spring", damping: 18, stiffness: 250 },
-      opacity: { duration: 0.3 },
-      type: "spring",
-      damping: 20,
-      stiffness: 300,
-      staggerChildren: 0.07,
-      delayChildren: 0.2,
-    },
-  },
-  collapsed: {
-    y: 0,
-    opacity: 1,
-    width: "3rem",
-    transition: {
-      type: "spring",
-      damping: 20,
-      stiffness: 300,
-      when: "afterChildren",
-      staggerChildren: 0.05,
-      staggerDirection: -1,
-    },
-  },
-};
-
-const logoVariants: Variants = {
-  expanded: {
-    opacity: 1,
-    x: 0,
-    rotate: 0,
-    transition: { type: "spring", damping: 15 },
-  },
-  collapsed: {
-    opacity: 0,
-    x: -25,
-    rotate: -180,
-    transition: { duration: 0.3 },
-  },
-};
-
-const itemVariants: Variants = {
-  expanded: {
-    opacity: 1,
-    x: 0,
-    scale: 1,
-    transition: { type: "spring", damping: 15 },
-  },
-  collapsed: {
-    opacity: 0,
-    x: -20,
-    scale: 0.95,
-    transition: { duration: 0.2 },
-  },
-};
-
-const collapsedIconVariants: Variants = {
-  expanded: {
-    opacity: 0,
-    scale: 0.8,
-    transition: { duration: 0.2 },
-  },
-  collapsed: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: "spring",
-      damping: 15,
-      stiffness: 300,
-      delay: 0.15,
-    },
-  },
-};
-
-const MotionLink = motion.create(Link);
-
-export function AnimatedNavFramer() {
-  const [isExpanded, setExpanded] = React.useState(true);
-  const pathname = usePathname();
-
-  const { scrollY } = useScroll();
-  const lastScrollY = React.useRef(0);
-  const scrollPositionOnCollapse = React.useRef(0);
-
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = lastScrollY.current;
-
-    if (isExpanded && latest > previous && latest > 150) {
-      setExpanded(false);
-      scrollPositionOnCollapse.current = latest;
-    } else if (
-      !isExpanded &&
-      latest < previous &&
-      scrollPositionOnCollapse.current - latest > EXPAND_SCROLL_THRESHOLD
-    ) {
-      setExpanded(true);
-    }
-
-    lastScrollY.current = latest;
-  });
-
-  const handleNavClick = (e: React.MouseEvent) => {
-    if (!isExpanded) {
-      e.preventDefault();
-      setExpanded(true);
-    }
-  };
-
+function NavigationMenu({
+  className,
+  children,
+  viewport = true,
+  ...props
+}: React.ComponentProps<typeof NavigationMenuPrimitive.Root> & {
+  viewport?: boolean;
+}) {
   return (
-    <div className="hidden md:flex fixed top-3 sm:top-6 left-1/2 -translate-x-1/2 z-50 w-[92vw] sm:w-auto">
-      <motion.nav
-        initial={{ y: -80, opacity: 0 }}
-        animate={isExpanded ? "expanded" : "collapsed"}
-        variants={containerVariants}
-        whileHover={!isExpanded ? { scale: 1.1 } : {}}
-        whileTap={!isExpanded ? { scale: 0.95 } : {}}
-        onClick={handleNavClick}
-        className={cn(
-          "flex items-center overflow-hidden rounded-full border border-amber/40 bg-navy/90 shadow-[0_8px_30px_rgb(1,72,138,0.35)] backdrop-blur-md h-12 sm:h-16 w-full justify-between sm:justify-start",
-          !isExpanded && "cursor-pointer justify-center"
-        )}
+    <NavigationMenuPrimitive.Root
+      data-slot="navigation-menu"
+      data-viewport={viewport}
+      className={cn("group/navigation-menu relative flex max-w-max flex-1 items-center justify-center", className)}
+      {...props}
+    >
+      {children}
+      {viewport && <NavigationMenuViewport />}
+    </NavigationMenuPrimitive.Root>
+  );
+}
+
+function NavigationMenuList({ className, ...props }: React.ComponentProps<typeof NavigationMenuPrimitive.List>) {
+  return (
+    <NavigationMenuPrimitive.List
+      data-slot="navigation-menu-list"
+      className={cn("group flex flex-1 list-none items-center justify-center gap-1", className)}
+      {...props}
+    />
+  );
+}
+
+function NavigationMenuItem({ className, ...props }: React.ComponentProps<typeof NavigationMenuPrimitive.Item>) {
+  return <NavigationMenuPrimitive.Item data-slot="navigation-menu-item" className={cn("relative", className)} {...props} />;
+}
+
+function NavigationMenuTrigger({
+  className,
+  children,
+  ...props
+}: React.ComponentProps<typeof NavigationMenuPrimitive.Trigger>) {
+  return (
+    <NavigationMenuPrimitive.Trigger
+      data-slot="navigation-menu-trigger"
+      className={cn(
+        "group inline-flex w-max items-center justify-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium text-navy-dark dark:text-white transition-colors outline-none hover:text-[#01488B] dark:hover:text-amber focus-visible:outline-none data-[state=open]:text-[#01488B] dark:data-[state=open]:text-amber",
+        className
+      )}
+      {...props}
+    >
+      {children}
+      <svg
+        className="relative top-px size-3 shrink-0 transition duration-300 group-data-[state=open]:rotate-180"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
-        <motion.div
-          variants={logoVariants}
-          className="flex-shrink-0 flex items-center pl-1.5 sm:pl-2 pr-2 sm:pr-3"
-        >
-          <Link href="/" onClick={(e) => e.stopPropagation()}>
-            <Image
-              src="/logo.jpeg"
-              alt="Shrestha IT"
-              width={48}
-              height={48}
-              className="h-9 w-9 sm:h-12 sm:w-12 rounded-full object-cover"
-              priority
-            />
-          </Link>
-        </motion.div>
+        <path d="m6 9 6 6 6-6" />
+      </svg>
+    </NavigationMenuPrimitive.Trigger>
+  );
+}
 
-        <motion.div
-          className={cn(
-            "flex items-center gap-1.5 sm:gap-6 pr-2 sm:pr-5 justify-around sm:justify-start flex-1 sm:flex-initial",
-            !isExpanded && "pointer-events-none"
-          )}
-        >
-          {navItems.map((item) => {
-            const active = pathname === item.href;
-            return (
-              <MotionLink
-                key={item.name}
-                href={item.href}
-                variants={itemVariants}
-                onClick={(e) => e.stopPropagation()}
-                className={cn(
-                  "relative text-xs sm:text-sm font-medium transition-colors px-1.5 sm:px-2 py-0.5 sm:py-1 whitespace-nowrap",
-                  active
-                    ? "text-amber"
-                    : "text-white/80 hover:text-amber"
-                )}
-              >
-                {item.name}
-                {active && (
-                  <span className="absolute -bottom-0.5 left-1/2 h-0.5 w-3 sm:w-4 -translate-x-1/2 rounded-full bg-amber" />
-                )}
-              </MotionLink>
-            );
-          })}
-          <MotionLink
-            href="/contact"
-            variants={itemVariants}
-            onClick={(e) => e.stopPropagation()}
-            className="hidden sm:inline-flex items-center justify-center rounded-full bg-amber px-4 py-1.5 text-sm font-semibold text-navy shadow transition hover:bg-amber-dark whitespace-nowrap"
-          >
-            Enroll Now
-          </MotionLink>
-        </motion.div>
+function NavigationMenuContent({ className, ...props }: React.ComponentProps<typeof NavigationMenuPrimitive.Content>) {
+  return (
+    <NavigationMenuPrimitive.Content
+      data-slot="navigation-menu-content"
+      className={cn(
+        "data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-20 data-[motion=from-start]:slide-in-from-left-20 data-[motion=to-end]:slide-out-to-right-20 data-[motion=to-start]:slide-out-to-left-20 top-0 left-0 w-full bg-popover text-popover-foreground shadow-2xl rounded-2xl border border-navy/10 dark:border-white/10 md:absolute md:w-auto",
+        className
+      )}
+      {...props}
+    />
+  );
+}
 
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <motion.div
-            variants={collapsedIconVariants}
-            animate={isExpanded ? "expanded" : "collapsed"}
-          >
-            <Menu className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
-          </motion.div>
-        </div>
-      </motion.nav>
+function NavigationMenuViewport({ className, ...props }: React.ComponentProps<typeof NavigationMenuPrimitive.Viewport>) {
+  return (
+    <div className="absolute top-full left-0 isolate z-50 flex justify-center">
+      <NavigationMenuPrimitive.Viewport
+        data-slot="navigation-menu-viewport"
+        className={cn(
+          "origin-top-center relative mt-2 w-full overflow-hidden rounded-2xl border border-navy/10 dark:border-white/10 bg-popover text-popover-foreground shadow-2xl data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 h-[var(--radix-navigation-menu-viewport-height)] md:w-[var(--radix-navigation-menu-viewport-width)]",
+          className
+        )}
+        {...props}
+      />
     </div>
   );
 }
+
+function NavigationMenuLink({ className, ...props }: React.ComponentProps<typeof NavigationMenuPrimitive.Link>) {
+  return (
+    <NavigationMenuPrimitive.Link
+      data-slot="navigation-menu-link"
+      className={cn(
+        "flex flex-col justify-center gap-1 rounded-xl px-3 py-2 text-sm outline-none transition-colors hover:bg-navy-light/60 dark:hover:bg-white/5 focus-visible:outline-none",
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
+export { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent, NavigationMenuLink, NavigationMenuViewport };

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { BackgroundBlur } from "@/components/BackgroundBlur";
 import { Component as TapedFooter } from "@/components/ui/footer-taped-design";
-import { AnimatedNavFramer } from "@/components/ui/navigation-menu";
-import { MobileNav } from "@/components/ui/mobile-nav";
+import { MainHeader } from "@/components/ui/main-header";
+import { HeaderOffset } from "@/components/HeaderOffset";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { FloatingSocialBar } from "@/components/FloatingSocialBar";
@@ -22,12 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${oswald.variable} ${poppins.variable}`} suppressHydrationWarning>
       <body className="relative min-h-screen bg-background font-sans text-foreground antialiased">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} forcedTheme="light">
           <BackgroundBlur />
-          <AnimatedNavFramer />
-          <MobileNav />
+          <MainHeader />
           <FloatingSocialBar />
           <div className="flex min-h-screen flex-col">
+            <HeaderOffset />
             <main className="flex-1">{children}</main>
             <ScrollToTop />
             <TapedFooter />

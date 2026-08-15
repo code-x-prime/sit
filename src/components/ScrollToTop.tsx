@@ -42,7 +42,7 @@ export function ScrollToTop() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.7, y: 20 }}
           transition={{ type: "spring", stiffness: 260, damping: 20 }}
-          className="fixed bottom-7 right-7 z-50 cursor-pointer"
+          className="fixed bottom-24 right-5 sm:bottom-24 sm:right-7 z-30 cursor-pointer"
           onClick={scrollToTop}
         >
           <div className="group relative flex h-13 w-13 items-center justify-center rounded-full bg-navy-dark/95 border border-white/20 shadow-[0_10px_30px_rgba(0,0,0,0.4)] backdrop-blur-xl transition-all duration-300 hover:scale-110 hover:border-amber/60 hover:shadow-[0_10px_35px_rgba(245,184,0,0.4)]">
