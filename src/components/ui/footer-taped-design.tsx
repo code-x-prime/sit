@@ -71,8 +71,8 @@ export const Component = () => {
           <p>&copy;{currentYear} Shrestha IT Academy</p>
           <span className="hidden sm:inline text-gray-400">|</span>
           <div className="flex flex-row gap-4">
-            <span className="hover:text-navy cursor-pointer transition-colors">Terms</span>
-            <span className="hover:text-navy cursor-pointer transition-colors">Privacy</span>
+            <Link href="/terms" className="hover:text-navy transition-colors">Terms</Link>
+            <Link href="/privacy" className="hover:text-navy transition-colors">Privacy</Link>
           </div>
         </div>
 
