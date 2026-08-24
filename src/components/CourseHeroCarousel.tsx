@@ -35,8 +35,8 @@ export function CourseHeroCarousel() {
   }, [api]);
 
   return (
-    <section className="relative w-full pt-24 pb-8  md:pb-14">
-      <div className="mx-auto max-w-[90%] px-4">
+    <section className="relative w-full pt-24 sm:pt-28 pb-8 md:pb-14">
+      <div className="mx-auto max-w-[94%] sm:max-w-[90%] px-4">
         {/* Carousel */}
         <Carousel
           setApi={setApi}
