@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Shrestha IT",
-  description: "How Shrestha IT collects, uses, and protects your personal information when you use our website and enroll in our trading courses.",
+  description: "How Shrestha IT collects, uses, and protects your personal information when you use our website and enroll in our market education courses.",
   alternates: { canonical: "https://shresthait.com/privacy" },
 };
 

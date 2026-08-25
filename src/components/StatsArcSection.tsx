@@ -163,12 +163,12 @@ export function StatsArcSection() {
 
             {/* Headline matching Surfe layout "Sell more, type less" */}
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-navy-dark dark:text-white tracking-tight leading-[1.1]">
-              Trade <span className="text-rose-500 dark:text-rose-400">smarter</span>, win <span className="text-navy dark:text-amber">bigger</span>
+              Learn <span className="text-rose-500 dark:text-rose-400">smarter</span>, understand <span className="text-navy dark:text-amber">markets better</span>
             </h2>
 
             {/* Body Description */}
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl">
-              Stock Institute of Trading (SIT) saves you hours of market guesswork. No copy-paste signals anymore—get data accuracy, 1-on-1 mentor guidance, and live setups to close more profitable trades.
+              Stock Institute of Trading (SIT) saves you hours of market guesswork with structured, concept-first learning. Get data-backed lessons, 1-on-1 mentor guidance, and live market-analysis sessions to build real understanding of how markets work.
             </p>
 
             {/* Action CTA Button */}
@@ -196,7 +196,7 @@ export function StatsArcSection() {
                 numberVal={7}
                 suffix="+"
                 iconSymbol="⤵"
-                label="expert mentors active daily guiding live trade setups & analysis"
+                label="expert mentors active daily guiding live market analysis sessions"
                 bgClass="bg-[#FCE7F3] dark:bg-[#4a152e]/80"
                 textClass="text-[#831843] dark:text-[#fbcfe8]"
                 delay={0.1}
@@ -204,11 +204,11 @@ export function StatsArcSection() {
 
               {/* Card 2: Pastel Orange / Peach */}
               <StatCard
-                value="94%"
-                numberVal={94}
+                value="98%"
+                numberVal={98}
                 suffix="%"
                 iconSymbol="↗"
-                label="success rate reached in live market trade setup execution"
+                label="course completion rate across our structured learning batches"
                 bgClass="bg-[#FFEDD5] dark:bg-[#512204]/80"
                 textClass="text-[#7c2d12] dark:text-[#fed7aa]"
                 delay={0.2}
@@ -220,7 +220,7 @@ export function StatsArcSection() {
                 numberVal={250}
                 suffix="+"
                 iconSymbol="🔄"
-                label="active traders & investors enrolled in our masterclass community"
+                label="students & learners enrolled in our market education community"
                 bgClass="bg-[#E0F2FE] dark:bg-[#073655]/80"
                 textClass="text-[#075985] dark:text-[#bae6fd]"
                 delay={0.3}
@@ -249,7 +249,7 @@ export function StatsArcSection() {
                 numberVal={1000}
                 suffix="+"
                 iconSymbol="⤴"
-                label="live interactive trading sessions & webinars completed"
+                label="live interactive market education sessions & webinars completed"
                 bgClass="bg-[#0F172A] dark:bg-[#020617] border border-slate-700/50 shadow-md"
                 textClass="text-white"
                 delay={0.25}
@@ -259,7 +259,7 @@ export function StatsArcSection() {
               <StatCard
                 value="24/7"
                 iconSymbol="📈"
-                label="real-time market analysis & instant community signal alerts"
+                label="real-time market analysis & instant community learning updates"
                 bgClass="bg-[#F3E8FF] dark:bg-[#3b1259]/80"
                 textClass="text-[#581c87] dark:text-[#e9d5ff]"
                 delay={0.35}

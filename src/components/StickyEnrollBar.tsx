@@ -33,7 +33,7 @@ export function StickyEnrollBar({ whatsappMsg, price, shortTitle }: StickyEnroll
           rel="noreferrer"
           className="flex flex-1 sm:flex-none items-center justify-center gap-1.5 rounded-xl bg-[#0A2540] dark:bg-amber px-6 py-3.5 text-sm font-bold text-white dark:text-navy-dark shadow-md transition hover:scale-[1.02]"
         >
-          Join Classes
+          Enquire Now
           <IconArrowRight className="size-4" />
         </a>
       </div>

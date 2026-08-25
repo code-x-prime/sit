@@ -19,27 +19,27 @@ export interface FaqCategory {
 const DEFAULT_FAQ_DATA: FaqCategory[] = [
   {
     id: "courses",
-    label: "Trading Programs",
+    label: "Market Education Programs",
     items: [
       {
-        question: "What trading markets do you cover at Shrestha IT Academy?",
+        question: "What financial markets do you cover at Shrestha IT Academy?",
         answer:
-          "We offer specialized practical courses in Indian Equity & Stock Markets, F&O & Option Chain Derivatives, Forex & Global Currency Pairs, and Crypto Assets & Web3.",
+          "We offer specialized educational courses covering Indian Equity & Stock Market concepts, F&O & Option Chain Derivatives, Forex & Global Currency Pairs, and Crypto Assets & Web3.",
       },
       {
         question: "Are these courses suitable for complete beginners?",
         answer:
-          "Yes! Our curriculum is structured step-by-step from foundational market mechanics to advanced institutional price-action setups and risk management.",
+          "Yes! Our curriculum is structured step-by-step from foundational market mechanics to advanced market-structure concepts and risk-management principles.",
       },
       {
-        question: "What is the typical duration of a trading course?",
+        question: "What is the typical duration of a course?",
         answer:
-          "Most specialized modules run for 10 to 14 weeks. We also offer combined multi-market packages with lifetime community and mentorship desk access.",
+          "Most specialized modules run for 10 to 14 weeks. We also offer combined multi-market packages with lifetime community and mentorship access.",
       },
       {
-        question: "Will I get live market practical trading experience?",
+        question: "Will the course include practical market learning?",
         answer:
-          "Absolutely. Every course includes live market trading sessions, real-time chart analysis, risk-reward calculation drills, and mentor supervision.",
+          "Absolutely. Every course includes live market-analysis sessions, real-time chart study, risk-reward concept exercises, and mentor guidance.",
       },
     ],
   },
@@ -55,12 +55,12 @@ const DEFAULT_FAQ_DATA: FaqCategory[] = [
       {
         question: "Do you offer flexible fee payment installments?",
         answer:
-          "Yes, we provide student-friendly installment options and combo package discounts when enrolling for multiple market modules.",
+          "Yes, we provide student-friendly installment options and combo package discounts when enrolling for multiple market-education modules.",
       },
       {
         question: "Will I receive a completion certificate?",
         answer:
-          "Yes, every student receives an official course completion certificate from Shrestha IT Academy upon passing the practical strategy evaluation.",
+          "Yes, every student receives an official course completion certificate from Shrestha IT Academy upon completing the course evaluation.",
       },
     ],
   },
@@ -69,9 +69,9 @@ const DEFAULT_FAQ_DATA: FaqCategory[] = [
     label: "Mentorship & Support",
     items: [
       {
-        question: "How does 1-on-1 mentorship work during market hours?",
+        question: "How does 1-on-1 mentorship work during class sessions?",
         answer:
-          "Our senior traders review your trade setups, entry/exit logs, risk management rules, and provide constructive feedback during live market sessions.",
+          "Our mentors review your chart-analysis exercises, discuss market-structure concepts and risk-management principles, and provide constructive feedback during live sessions.",
       },
       {
         question: "Can I access recorded lessons if I miss a live class?",
@@ -81,7 +81,7 @@ const DEFAULT_FAQ_DATA: FaqCategory[] = [
       {
         question: "What post-course support is provided?",
         answer:
-          "Students get lifetime access to our trader community channel, weekly market outlook webinars, and alumni trading desk meetups.",
+          "Students get lifetime access to our learning community channel, weekly market-education webinars, and alumni meetups.",
       },
     ],
   },
@@ -90,14 +90,14 @@ const DEFAULT_FAQ_DATA: FaqCategory[] = [
     label: "Beginner Guidance",
     items: [
       {
-        question: "How much capital do I need to start trading?",
+        question: "Do I need prior market experience to join?",
         answer:
-          "You do not need large capital to start. We teach risk-first position sizing and paper trading drills so you gain confidence before deploying real funds.",
+          "No, you don't need any prior experience. We start with foundational concepts and risk-management principles so you build confidence step by step.",
       },
       {
-        question: "Can I pursue trading alongside a full-time job or college?",
+        question: "Can I pursue this course alongside a full-time job or college?",
         answer:
-          "Yes! We offer weekend batches, evening classes, and swing trading strategies specifically designed for working professionals and students.",
+          "Yes! We offer weekend batches and evening classes specifically designed for working professionals and students.",
       },
     ],
   },

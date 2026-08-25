@@ -17,13 +17,13 @@ export interface MinimalHeroProps {
 
 export function MinimalHero({
   kicker = "Shrestha IT Academy",
-  title = <>Build fast.<br />Trade smart.</>,
-  subtitle = "Practical stock market & financial trading education focused on clarity, risk control, and real execution.",
-  ctaText = "Explore Courses",
+  title = <>Learn fast.<br />Understand markets.</>,
+  subtitle = "Practical stock market & financial-market education focused on clarity, risk-management principles, and structured learning.",
+  ctaText = "Explore Programs",
   ctaHref = "/courses",
-  tag = "Designed for Practical Traders",
-  heading = "Institutional Strategy. Live Execution.",
-  desc = "Master Indian Equity, F&O, Forex & Crypto with mentored live market drills and institutional price action analysis.",
+  tag = "Designed for Practical Learners",
+  heading = "Structured Curriculum. Guided Learning.",
+  desc = "Study Indian Equity, F&O, Forex & Crypto concepts with mentored live market-analysis sessions and structured price-action learning.",
 }: MinimalHeroProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);

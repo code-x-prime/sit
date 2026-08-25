@@ -28,7 +28,7 @@ export const Component = () => {
               <Image src="/logo.jpeg" alt="Shrestha IT" width={36} height={36} className="rounded-full object-cover" />
               Shrestha IT
             </Link>
-            <p className='text-gray-500 font-medium text-sm md:text-base w-full md:w-4/5'>Practical trading education in Indian Equity, Forex, Crypto, and F&O Derivatives.</p>
+            <p className='text-gray-500 font-medium text-sm md:text-base w-full md:w-4/5'>Practical financial-market education in Indian Equity and Derivatives.</p>
           </div>
 
           <div className='flex flex-col sm:flex-row md:flex-row gap-4 sm:gap-6 md:gap-20 items-start w-full md:w-auto'>
@@ -38,19 +38,19 @@ export const Component = () => {
               <div className="flex flex-col gap-2 text-sm items-start">
                 <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/">Home</Link>
                 <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/about">About Us</Link>
-                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses">Trading Courses</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses">Market Education</Link>
                 <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/blog">Blogs</Link>
                 <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/contact">Contact & Enquiry</Link>
               </div>
             </div>
 
             <div className='flex flex-col gap-1 md:gap-4'>
-              <h4 className='uppercase font-heading text-md text-gray-500 font-semibold'>Trading Markets</h4>
+              <h4 className='uppercase font-heading text-md text-gray-500 font-semibold'>Market Education</h4>
               <div className="flex flex-col gap-2 text-sm items-start">
-                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/equity-derivatives">Indian Equity & Stocks</Link>
-                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/forex">Forex Trading Mastery</Link>
-                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/crypto">Crypto Assets & Web3</Link>
-                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/derivatives">F&O & Derivatives</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/equity-derivatives">Equity & Derivatives Education</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/forex">Forex Market Education</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/crypto">Crypto & Web3 Education</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/derivatives">F&O & Derivatives Education</Link>
               </div>
             </div>
 

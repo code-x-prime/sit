@@ -68,7 +68,7 @@ Message: ${formState.message || "Please share admission & course details."}`;
       <MinimalHero
         kicker="Delhi Campus & Online Support"
         title={<>Get in Touch.<br />Start Your Journey.</>}
-        subtitle="Have questions about our trading programs? Visit our Uttam Nagar campus or talk to our senior mentors."
+        subtitle="Have questions about our market education programs? Visit our Uttam Nagar campus or talk to our senior mentors."
         ctaText="WhatsApp Chat"
         ctaHref={`https://wa.me/919236666923?text=${encodeURIComponent(whatsappMsg)}`}
         tag="Instant Mentorship Support"
@@ -95,7 +95,7 @@ Message: ${formState.message || "Please share admission & course details."}`;
               </h2>
 
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Fill in your details and our trading team will connect with you via Call / WhatsApp to guide you with courses, batch schedules, and fee structures.
+                Fill in your details and our team will connect with you via Call / WhatsApp to guide you with course details, batch schedules, and fee structures.
               </p>
 
               {/* Quick Info Grid */}
@@ -167,7 +167,7 @@ Message: ${formState.message || "Please share admission & course details."}`;
                       Send Your Message
                     </h3>
                     <p className="text-xs text-muted-foreground mt-1">
-                      Explore programs, course modules, and live trading schedules with our mentors.
+                      Explore programs, course modules, and live class schedules with our mentors.
                     </p>
                   </div>
 

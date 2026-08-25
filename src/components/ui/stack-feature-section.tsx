@@ -32,11 +32,11 @@ interface FeatureSectionProps {
 }
 
 export default function FeatureSection({
-  title = "Ready to start your trading journey?",
-  description = "Join Shrestha IT today and get the guidance you need to build trading confidence.",
-  primaryBtnText = "Enroll Now",
+  title = "Ready to start your market education journey?",
+  description = "Join Shrestha IT today and get the guidance you need to build financial-market knowledge and confidence.",
+  primaryBtnText = "Enquire Now",
   primaryBtnHref = "/contact",
-  secondaryBtnText = "Explore Courses",
+  secondaryBtnText = "Explore Programs",
   secondaryBtnHref = "/courses"
 }: FeatureSectionProps) {
   const orbitCount = 3;

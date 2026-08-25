@@ -16,8 +16,8 @@ const photos: GalleryPhoto[] = [
   {
     id: "team-photo-large",
     src: "/gallery/team-photo-large.jpg",
-    alt: "Shrestha IT trading academy full team and student community at the Delhi campus",
-    caption: "Our Growing Trading Community",
+    alt: "Shrestha IT market education academy full team and student community at the Delhi campus",
+    caption: "Our Growing Learning Community",
   },
   {
     id: "media-interview-1",
@@ -28,14 +28,14 @@ const photos: GalleryPhoto[] = [
   {
     id: "mentor-teaching",
     src: "/gallery/mentor-teaching.jpg",
-    alt: "Live trading mentor teaching candlestick chart analysis to students on smart board",
-    caption: "Live Market Trading Sessions",
+    alt: "Market education mentor teaching candlestick chart analysis to students on smart board",
+    caption: "Live Market Education Sessions",
   },
   {
     id: "certificate-ceremony-1",
     src: "/gallery/certificate-ceremony-1.jpg",
-    alt: "Students receiving trading course completion certificates at Shrestha IT",
-    caption: "Certified Trader Graduations",
+    alt: "Students receiving market education course completion certificates at Shrestha IT",
+    caption: "Course Completion Ceremonies",
   },
   {
     id: "founder-interview-desk",
@@ -46,44 +46,44 @@ const photos: GalleryPhoto[] = [
   {
     id: "classroom-session-1",
     src: "/gallery/classroom-session-1.jpg",
-    alt: "Shrestha IT classroom with mentor guiding students through a live trading setup",
-    caption: "Hands-On Classroom Training",
+    alt: "Shrestha IT classroom with mentor guiding students through live market analysis",
+    caption: "Hands-On Classroom Learning",
   },
   {
     id: "certificate-handover-2",
     src: "/gallery/certificate-handover-2.jpg",
-    alt: "Senior mentor handing over a trading certificate of participation to a student",
+    alt: "Senior mentor handing over a market education certificate of participation to a student",
     caption: "Recognizing Every Milestone",
   },
   {
     id: "celebration-team",
     src: "/gallery/celebration-team.jpg",
-    alt: "Shrestha IT students and mentors celebrating together at the trading academy office",
-    caption: "Celebrating Trader Success",
+    alt: "Shrestha IT students and mentors celebrating together at the market education academy office",
+    caption: "Celebrating Student Success",
   },
   {
     id: "office-team",
     src: "/gallery/office-team.jpg",
-    alt: "Shrestha IT trading academy office team group photo",
+    alt: "Shrestha IT market education academy office team group photo",
     caption: "Our Delhi Campus Office",
   },
   {
     id: "trading-session-live",
     src: "/gallery/trading-session-live.jpg",
-    alt: "Mentor explaining live Bitcoin trading chart on smart board at Shrestha IT",
+    alt: "Mentor explaining a live Bitcoin market chart on smart board at Shrestha IT",
     caption: "Real-Time Market Analysis",
   },
   {
     id: "certificate-group-2",
     src: "/gallery/certificate-group-2.jpg",
-    alt: "Group of certified students posing with their trading course completion certificates",
-    caption: "Every Batch, A New Success Story",
+    alt: "Group of students posing with their market education course completion certificates",
+    caption: "Every Batch, A New Learning Milestone",
   },
   {
     id: "classroom-discussion",
     src: "/gallery/classroom-discussion.jpg",
-    alt: "Students in an open discussion during a live trading class at Shrestha IT",
-    caption: "Interactive Trading Discussions",
+    alt: "Students in an open discussion during a live market education class at Shrestha IT",
+    caption: "Interactive Market Discussions",
   },
 ];
 
@@ -101,7 +101,7 @@ export function PhotoGallery({
       Real Students. Real Mentors. <span className="text-[#01488B] dark:text-amber">Real Results.</span>
     </>
   ),
-  description = "A glimpse inside our Delhi campus — live trading sessions, mentor-led classrooms, media features, and certified trader graduations.",
+  description = "A glimpse inside our Delhi campus — live market education sessions, mentor-led classrooms, media features, and course completion ceremonies.",
   showCta = true,
 }: PhotoGalleryProps) {
   return (

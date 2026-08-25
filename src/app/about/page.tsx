@@ -89,10 +89,10 @@ const highlights = [
 const mentors = [
   {
     name: "Rahul Sharma",
-    role: "Equity & F&O Specialist",
+    role: "Equity & F&O Market Educator",
     experience: "8+ Yrs Exp",
     avatar: "/avatar_rahul.png",
-    specialty: "Price Action & Option Buying",
+    specialty: "Price Action & Options Concepts",
     badgeColor: "bg-[#E0F2FE] text-[#075985] dark:bg-[#073655] dark:text-[#bae6fd]",
   },
   {
@@ -105,7 +105,7 @@ const mentors = [
   },
   {
     name: "Amit Verma",
-    role: "Crypto & Web3 Strategist",
+    role: "Crypto & Web3 Educator",
     experience: "7+ Yrs Exp",
     avatar: "/avatar_amit.png",
     specialty: "Crypto Derivatives & On-Chain",
@@ -113,10 +113,10 @@ const mentors = [
   },
   {
     name: "Priya Malhotra",
-    role: "Derivatives Market Analyst",
+    role: "Derivatives Market Educator",
     experience: "5+ Yrs Exp",
     avatar: "/avatar_priya.png",
-    specialty: "Option Selling & Hedging",
+    specialty: "Options Concepts & Hedging",
     badgeColor: "bg-[#F3E8FF] text-[#581c87] dark:bg-[#3b1259] dark:text-[#e9d5ff]",
   },
   {
@@ -140,16 +140,16 @@ const mentors = [
 export default function AboutPage() {
   return (
     <div className="w-full">
-      {/* Hero Section - KEEPING AS IS (user approved) */}
+      {/* Hero Section */}
       <MinimalHero
         kicker="About Shrestha IT Academy"
         title={<>Practical Institute.<br />Built for Growth.</>}
-        subtitle="Empower students with practical trading skills, institutional price action mentorship, and real-world market experience."
-        ctaText="View Courses"
+        subtitle="Empower students with practical financial-market knowledge, price-action concepts, and structured market-analysis learning."
+        ctaText="View Programs"
         ctaHref="/courses"
         tag="Our Mission & Vision"
-        heading="Trusted Trading Education Across India"
-        desc="Dedicated to building confident traders in Equity, Forex, Crypto, and F&O derivatives."
+        heading="Trusted Financial Market Education Across India"
+        desc="Dedicated to building confident market learners in Equity, Forex, Crypto, and F&O derivatives concepts."
       />
 
       <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -193,10 +193,10 @@ export default function AboutPage() {
                   <span>Our Mission</span>
                 </div>
                 <h3 className="font-heading text-2xl font-black text-navy-dark dark:text-white tracking-tight">
-                  Actionable Trading Skills & Wealth Building
+                  Practical Market Knowledge & Analytical Skills
                 </h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  Empower students with practical, actionable trading skills and a rock-solid foundation in wealth-building financial markets across Equity, Forex, Crypto, and F&O Derivatives.
+                  Empower students with practical, structured financial-market education and a strong analytical foundation across Equity, Forex, Crypto, and F&O Derivatives concepts.
                 </p>
               </div>
             </div>
@@ -218,10 +218,10 @@ export default function AboutPage() {
                   <span>Our Vision</span>
                 </div>
                 <h3 className="font-heading text-2xl font-black text-navy-dark dark:text-white tracking-tight">
-                  India&apos;s Most Trusted Trading Academy
+                  India&apos;s Most Trusted Market Education Academy
                 </h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  Become the most trusted, student-focused trading academy across India with proven institutional price action methodologies and strict risk management rules.
+                  Become the most trusted, student-focused market-education academy across India with a proven curriculum in price-action concepts and risk-management principles.
                 </p>
               </div>
             </div>
@@ -355,13 +355,13 @@ export default function AboutPage() {
           <div className="text-center mb-12 space-y-3">
             <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-navy/10 dark:border-white/10 bg-navy-light/60 dark:bg-navy/40 text-xs font-bold uppercase tracking-wider text-navy dark:text-amber">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              Expert Trading Team
+              Expert Education Team
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-navy-dark dark:text-white">
-              Learn From Active <span className="text-[#01488B] dark:text-amber">Market Mentors</span>
+              Learn From Experienced <span className="text-[#01488B] dark:text-amber">Market Mentors</span>
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base max-w-xl mx-auto">
-              Get 1-on-1 mentorship, live market guidance, and risk management strategies from seasoned market professionals.
+              Get 1-on-1 mentorship, live market analysis discussions, and risk-management principles from experienced market educators.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -414,18 +414,18 @@ export default function AboutPage() {
                   Mentorship & Support
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-black text-navy-dark dark:text-white">
-                  Financial Planning and Analysis
+                  Market Education & Learning Support
                 </h2>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  SIT offers personalized mentorship from a team of seven industry experts, each specializing in different trading segments. Our mentors provide practical guidance, tailored strategies, and ongoing support to ensure that every learner gains the confidence and skills needed to succeed in trading.
+                  SIT offers personalized mentorship from a team of seven industry experts, each specializing in a different market segment. Our mentors provide practical guidance, structured learning support, and ongoing feedback to ensure that every learner gains the confidence and analytical skills needed to understand the markets.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { icon: IconTarget, label: "Complete Edge + Psychology", color: "text-[#831843] dark:text-[#fbcfe8]" },
-                  { icon: IconEye, label: "Emotions Development", color: "text-[#075985] dark:text-[#bae6fd]" },
-                  { icon: IconTrendingUp, label: "Calculate High Risk Trades", color: "text-[#713f12] dark:text-[#fef08a]" },
-                  { icon: IconChartBar, label: "Performance Measurement", color: "text-[#581c87] dark:text-[#e9d5ff]" },
+                  { icon: IconTarget, label: "Market Discipline & Psychology", color: "text-[#831843] dark:text-[#fbcfe8]" },
+                  { icon: IconEye, label: "Emotional Discipline Concepts", color: "text-[#075985] dark:text-[#bae6fd]" },
+                  { icon: IconTrendingUp, label: "Understanding Market Risk", color: "text-[#713f12] dark:text-[#fef08a]" },
+                  { icon: IconChartBar, label: "Learning Progress Review", color: "text-[#581c87] dark:text-[#e9d5ff]" },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3 p-4 rounded-2xl bg-card border border-navy/10 dark:border-white/10 shadow-sm">
                     <item.icon size={20} className={`shrink-0 ${item.color}`} />
@@ -506,7 +506,7 @@ export default function AboutPage() {
                   Shrestha Edutech Private Limited holds official ISO 9001:2015 Quality Management System Certification (Certificate No: <strong className="text-navy-dark dark:text-amber">UBML-QMS-0702026002</strong>) for Education and Skill Development Training.
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  SIT ensures that learners are future-ready by offering comprehensive exams to test their trading knowledge and skills. Upon successful completion, participants receive an ISO certification that validates their expertise in trading stocks, forex, and cryptocurrency.
+                  SIT ensures that learners are future-ready by offering comprehensive exams to test their market knowledge and analytical skills. Upon successful completion, participants receive a certificate of participation recognizing their learning in equity, forex, and cryptocurrency market education.
                 </p>
                 <div className="p-4 rounded-2xl bg-navy/5 dark:bg-amber/10 border border-navy/10 dark:border-amber/20">
                   <p className="text-xs font-semibold text-navy dark:text-amber">
@@ -535,11 +535,11 @@ export default function AboutPage() {
 
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white">
-                Start Your Trading Journey Today
+                Start Your Market Education Journey Today
               </h2>
 
               <p className="text-sm sm:text-base text-blue-100/90 max-w-xl mx-auto leading-relaxed">
-                Join our community of 250+ traders and get expert mentorship in Equity, Forex, Crypto & Derivatives markets.
+                Join our community of 250+ learners and get expert mentorship in Equity, Forex, Crypto & Derivatives market education.
               </p>
 
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -23,7 +23,7 @@ const socialItems = [
   {
     name: "WhatsApp",
     label: "WhatsApp Helpline",
-    href: "https://wa.me/919236666923?text=Hi%20Shrestha%20IT,%20I%20want%20to%20enquire%20about%20trading%20courses.",
+    href: "https://wa.me/919236666923?text=Hi%20Shrestha%20IT,%20I%20want%20to%20enquire%20about%20your%20market%20education%20courses.",
     icon: IconBrandWhatsapp,
     gradient: "from-emerald-400 via-teal-500 to-emerald-600",
     shadow: "shadow-emerald-500/50",

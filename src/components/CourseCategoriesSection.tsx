@@ -39,10 +39,10 @@ export function CourseCategoriesSection({ showTitle = true }: CourseCategoriesSe
                 Official SIT Curriculum & Pricing
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-navy-dark dark:text-white tracking-tight leading-tight">
-                Pick Your Market & <span className="text-[#01488B] dark:text-amber">Master Trading</span>
+                Pick Your Market & <span className="text-[#01488B] dark:text-amber">Start Learning</span>
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                Structured 2-Month hands-on programs with 4 progressive levels (Minor, Major, Bachelor & Master) designed to make you industry-ready.
+                Structured 2-Month educational programs with 4 progressive levels (Minor, Major, Bachelor & Master) designed to build market-ready knowledge.
               </p>
             </div>
 
@@ -56,7 +56,7 @@ export function CourseCategoriesSection({ showTitle = true }: CourseCategoriesSe
             const isPopular = course.popular;
             const isSelected = selectedCourse === course.id;
 
-            const whatsappMsg = `Hi Shrestha IT, I want to enroll in the ${course.title} (₹${course.offlinePrice}, 2 Months, 4 Levels). Please share admission & batch details for Online/Offline.`;
+            const whatsappMsg = `Hi Shrestha IT, I want to enquire about the ${course.title} course. Please share course details, schedule and admission information for Online/Offline.`;
 
             return (
               <div
@@ -200,7 +200,7 @@ export function CourseCategoriesSection({ showTitle = true }: CourseCategoriesSe
                 Get Complete Multi-Segment <span className="text-amber">Mastery Bundles</span>
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Combine Forex, Crypto & Derivatives for 3+ months of comprehensive live market training, personal mentor allocation, and lifetime trading desk support.
+                Combine Forex, Crypto & Derivatives market education for 3+ months of comprehensive learning, personal mentor allocation, and lifetime learning-community support.
               </p>
             </div>
 
@@ -224,7 +224,7 @@ export function CourseCategoriesSection({ showTitle = true }: CourseCategoriesSe
 
                 <a
                   href={`https://wa.me/919236666923?text=${encodeURIComponent(
-                    "Hi Shrestha IT, I want to enroll in the Forex + Crypto Combo Bundle (₹24,999 RS, 3+ Months Online/Offline). Please share admission details."
+                    "Hi Shrestha IT, I want to enquire about the Forex + Crypto Combo Bundle. Please share course details, schedule and admission information for Online/Offline."
                   )}`}
                   target="_blank"
                   rel="noreferrer"
@@ -252,7 +252,7 @@ export function CourseCategoriesSection({ showTitle = true }: CourseCategoriesSe
 
                 <a
                   href={`https://wa.me/919236666923?text=${encodeURIComponent(
-                    "Hi Shrestha IT, I want to enroll in the All-Segment Master Bundle (₹29,999 RS, All Segments Included Online/Offline). Please share admission details."
+                    "Hi Shrestha IT, I want to enquire about the All-Segment Master Bundle. Please share course details, schedule and admission information for Online/Offline."
                   )}`}
                   target="_blank"
                   rel="noreferrer"

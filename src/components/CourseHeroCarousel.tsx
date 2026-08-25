@@ -46,7 +46,7 @@ export function CourseHeroCarousel() {
         >
           <CarouselContent className="-ml-4 md:-ml-6">
             {COURSES.map((course) => {
-              const whatsappMsg = `Hi Shrestha IT, I want to enroll in the ${course.title} (₹${course.offlinePrice}, ${course.duration}, ${course.levels}). Please share admission & batch details for Online/Offline.`;
+              const whatsappMsg = `Hi Shrestha IT, I want to enquire about the ${course.title} course. Please share course details, schedule and admission information for Online/Offline.`;
               return (
                 <CarouselItem key={course.id} className="pl-4 md:pl-6 basis-full">
                   <div
@@ -112,7 +112,7 @@ export function CourseHeroCarousel() {
                             className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 px-5 py-2.5 sm:px-6 sm:py-3 text-xs sm:text-sm font-bold text-white shadow-lg transition hover:scale-[1.03]"
                           >
                             <IconBrandWhatsapp className="w-4 h-4" />
-                            Enroll on WhatsApp
+                            Enquire on WhatsApp
                           </a>
                         </div>
                       </div>

@@ -16,67 +16,67 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     name: "Anas Khan",
-    role: "Indian Equity Trader",
+    role: "Equity Market Education Student",
     location: "Delhi NCR",
     image: "/testimonials/Anas Khan-Indian Equity Trader.jpeg",
     quote:
-      "Shrestha IT ka practical market approach mindblowing hai! Live market sessions me candle chart setup aur SMC liquidity traps seekhe. Equity trading me mera accuracy rate 80%+ ho chuka hai.",
+      "Shrestha IT ka practical market approach mindblowing hai! Live market sessions me candle chart setup aur market-structure concepts seekhe. Ab equity charts ko bahut behtar samajh paata hoon.",
   },
   {
     name: "Manish Shrivastav",
-    role: "Indian Option Trader",
+    role: "Options Market Education Student",
     location: "Noida, UP",
     image: "/testimonials/Manish Shrivastav-Indian option trader.jpeg",
     quote:
-      "Options buying me regular losses ke baad maine SIT join kiya tha. Mentors ne risk management aur option greeks hedging setup ko clear karwaya. Highly recommended for Option traders!",
+      "Options ke concepts pehle confusing lagte the, isiliye SIT join kiya tha. Mentors ne risk-management principles aur option Greeks ko bahut clearly samjhaya. Highly recommended!",
   },
   {
     name: "Azhar Sheikh",
-    role: "Crypto & Derivatives Trader",
+    role: "Crypto & Derivatives Education Student",
     location: "Lucknow, UP",
     image: "/testimonials/azhar- crypto trader.jpeg",
     quote:
-      "Crypto market volatility ko manage karna aur leverage short-selling techniques SIT ke live trading lab me seekhi. Faculty support superb hai, continuous doubt clearing sessions milte hain.",
+      "Crypto market volatility ko samajhna aur leverage/short-selling concepts SIT ke live sessions me seekhe. Faculty support superb hai, continuous doubt-clearing sessions milte hain.",
   },
   {
     name: "Pawan Yadav",
-    role: "Indian Option Trader",
+    role: "Options Market Education Student",
     location: "Delhi Campus",
     image: "/testimonials/Pawan yadav-indian option trader.jpeg",
     quote:
-      "Offline campus training environment best hai! Live index desk par mentors ke saath real-time Nifty & Bank Nifty levels identify karke options trade execution seekha.",
+      "Offline campus learning environment best hai! Mentors ke saath real-time Nifty & Bank Nifty levels identify karke options market-structure analysis seekha.",
   },
   {
     name: "Rahul Vishwakarma",
-    role: "Crypto Trader",
+    role: "Crypto Market Education Student",
     location: "Banaras, UP",
     image: "/testimonials/Rahul Vishwakarma- Crypto trader.jpeg",
     quote:
-      "Spot & futures trading in crypto setups simple tarike se explain kiye gaye. Risk capital protection strategy ki wajah se mere loss trades zero ke barabar ho gaye hain.",
+      "Spot & futures crypto market concepts simple tarike se explain kiye gaye. Risk-management principles seekhne ke baad mera capital-protection approach bahut better ho gaya hai.",
   },
   {
     name: "Rajat Verma",
-    role: "Forex FX Trader",
+    role: "Forex Market Education Student",
     location: "Chandigarh",
     image: "/testimonials/Rajat-Forex Trader.jpeg",
     quote:
-      "Global Forex pairs MT4/MT5 setup, PIP spreads aur economic calendar events ka drop analysis SIT ne exact sikha diya. Forex live mentorship desk unmatched hai!",
+      "Global Forex pairs, MT4/MT5 platform, PIP/spread concepts aur economic-calendar analysis SIT ne exact sikha diya. Forex live mentorship sessions unmatched hain!",
   },
   {
     name: "Saif Qadri",
-    role: "Indian Equity Trader",
+    role: "Equity Market Education Student",
     location: "Jaipur, Rajasthan",
     image: "/testimonials/saif qadri- Indian equity trader.jpeg",
     quote:
-      "Basic candle reading se lekar advanced institutional SMC breakout setups tak shuru se end tak practical training mili. Offline lab and live desk access is gold!",
+      "Basic candle reading se lekar advanced market-structure concepts tak shuru se end tak practical learning mili. Offline lab and live classroom access is gold!",
   },
   {
     name: "Sneha Juneja",
-    role: "Crypto & Web3 Trader",
+    role: "Crypto & Web3 Education Student",
     location: "Gurugram, HR",
     image: "/testimonials/Sneha Juneja- Crypto trader.jpeg",
     quote:
-      "Being a woman trader, I was looking for authentic 1-on-1 mentorship. SIT mentors made crypto derivatives & altcoin cycle trading crystal clear with zero confusion.",
+      "I was looking for authentic 1-on-1 mentorship in a learning environment. SIT mentors made crypto derivatives & altcoin market-cycle concepts crystal clear with zero confusion.",
   },
 ];
 
@@ -96,10 +96,10 @@ export function TestimonialsSection() {
             Student Stories & Case Studies
           </span>
           <h2 className="text-3xl font-black tracking-tight text-balance text-navy-dark dark:text-white md:text-4xl lg:text-5xl">
-            Real Results, Real Traders
+            Real Students, Real Learning
           </h2>
           <p className="text-muted-foreground text-sm md:text-base max-w-xl">
-            See how our students transformed their trading journey with practical, mentor-led training at Shrestha IT.
+            See how our students built stronger market knowledge with practical, mentor-led education at Shrestha IT.
           </p>
         </div>
 

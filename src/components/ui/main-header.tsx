@@ -84,11 +84,11 @@ export function MainHeader() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Courses</NavigationMenuTrigger>
+              <NavigationMenuTrigger>Market Education</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <div className="w-[420px] bg-popover p-3">
                   <span className="mb-2 block px-2 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
-                    Our Trading Programs
+                    Our Market Education Programs
                   </span>
                   <div className="grid grid-cols-2 gap-1.5">
                     {COURSES.map((course) => (
@@ -122,7 +122,7 @@ export function MainHeader() {
                       href="/courses"
                       className="flex items-center justify-center gap-1.5 rounded-xl bg-navy-light/60 dark:bg-white/5 py-2.5 text-sm font-bold text-[#01488B] dark:text-amber hover:bg-navy-light dark:hover:bg-white/10"
                     >
-                      View All Courses &amp; Pricing
+                      View All Programs &amp; Pricing
                       <IconArrowRight className="size-4" />
                     </Link>
                   </NavigationMenuLink>
@@ -150,7 +150,7 @@ export function MainHeader() {
             href="/contact"
             className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-[#01488B] dark:bg-amber px-4 py-2 text-sm font-bold text-white dark:text-navy-dark shadow-md transition hover:bg-[#01488B]/90 dark:hover:bg-amber/90 hover:scale-[1.03]"
           >
-            Enroll Now
+            Enquire Now
           </Link>
 
           {/* Mobile trigger */}
@@ -208,7 +208,7 @@ export function MainHeader() {
                   href="/contact"
                   className="flex items-center justify-center gap-1.5 rounded-xl bg-[#01488B] dark:bg-amber px-4 py-3 text-sm font-bold text-white dark:text-navy-dark shadow-md"
                 >
-                  Enroll Now
+                  Enquire Now
                 </Link>
                 <a
                   href="https://wa.me/919236666923"
@@ -285,7 +285,7 @@ function MobileCourseDisclosure() {
         onClick={() => setOpen((v) => !v)}
         className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold text-navy-dark dark:text-white hover:bg-navy-light/60 dark:hover:bg-white/5"
       >
-        Courses
+        Market Education
         <IconChevronDown className={cn("size-4 transition-transform", open && "rotate-180")} />
       </button>
       {open && (
@@ -311,7 +311,7 @@ function MobileCourseDisclosure() {
               href="/courses"
               className="flex items-center justify-center gap-1.5 rounded-xl bg-navy-light/60 dark:bg-white/5 py-2.5 text-sm font-bold text-[#01488B] dark:text-amber"
             >
-              View All Courses & Pricing
+              View All Programs & Pricing
               <IconArrowRight className="size-4" />
             </Link>
           </SheetClose>

@@ -77,7 +77,7 @@ export default async function CourseDetailPage({
     notFound();
   }
 
-  const whatsappMsg = `Hi Shrestha IT, I want to enroll in the ${course.title} (₹${course.offlinePrice}, ${course.duration}, ${course.levels}). Please share admission & batch details for Online/Offline.`;
+  const whatsappMsg = `Hi Shrestha IT, I want to enquire about the ${course.title} course. Please share course details, schedule and admission information for Online/Offline.`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -159,7 +159,7 @@ export default async function CourseDetailPage({
               className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-bold text-navy-dark shadow-lg transition hover:scale-[1.02]"
             >
               <IconBrandWhatsapp className="size-5 text-emerald-600" />
-              Enroll on WhatsApp
+              Enquire on WhatsApp
             </a>
             <div className="flex items-center gap-1.5 text-white font-black text-2xl">
               <IconCurrencyRupee className="size-5" />
@@ -398,10 +398,21 @@ export default async function CourseDetailPage({
           </div>
         </AnimatedSection>
 
+        {/* Educational & Risk Disclosure */}
+        <AnimatedSection>
+          <div className="rounded-3xl border border-amber/30 dark:border-amber/20 bg-amber/5 dark:bg-amber/10 p-6 sm:p-8">
+            <SectionKicker>Important</SectionKicker>
+            <h2 className="font-heading text-xl font-extrabold text-navy-dark dark:text-white mb-3">Educational &amp; Risk Disclosure</h2>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              This course is provided for educational and informational purposes only. It is designed to teach concepts related to equity markets, derivatives, technical analysis, market analysis and risk management. The course does not provide investment advice, portfolio management, trade execution services, trading signals, guaranteed returns, or recommendations to buy or sell any financial instrument. Financial markets involve risk, and past performance does not guarantee future results.
+            </p>
+          </div>
+        </AnimatedSection>
+
         {/* Final CTA */}
         <AnimatedSection>
           <div className={`rounded-3xl bg-gradient-to-br ${course.gradientHeader} p-8 sm:p-10 text-center text-white shadow-2xl`}>
-            <h2 className="font-heading text-2xl sm:text-3xl font-black mb-2">Ready to Start {course.shortTitle}?</h2>
+            <h2 className="font-heading text-2xl sm:text-3xl font-black mb-2">Ready to Start Learning {course.shortTitle}?</h2>
             <p className="text-sm sm:text-base text-white/85 mb-6">
               ₹{course.offlinePrice} • {course.discount}
             </p>
@@ -413,7 +424,7 @@ export default async function CourseDetailPage({
                 className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-bold text-navy-dark shadow-lg transition hover:scale-[1.02]"
               >
                 <IconBrandWhatsapp className="size-5 text-emerald-600" />
-                Enroll on WhatsApp
+                Enquire on WhatsApp
               </a>
               <Link
                 href="/courses"

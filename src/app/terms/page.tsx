@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions | Shrestha IT",
-  description: "Terms and conditions for enrolling in and using Shrestha IT's trading education courses and website.",
+  description: "Terms and conditions for enrolling in and using Shrestha IT's market education courses and website.",
   alternates: { canonical: "https://shresthait.com/terms" },
 };
 
