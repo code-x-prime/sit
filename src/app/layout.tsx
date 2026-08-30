@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { BackgroundBlur } from "@/components/BackgroundBlur";
 import { Component as TapedFooter } from "@/components/ui/footer-taped-design";
 import { MainHeader } from "@/components/ui/main-header";
@@ -22,6 +23,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${oswald.variable} ${poppins.variable}`} suppressHydrationWarning>
       <body className="relative min-h-screen bg-background font-sans text-foreground antialiased">
+        {/* Google tag (gtag.js) */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-18326954298" strategy="afterInteractive" />
+        <Script id="google-tag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18326954298');
+          `}
+        </Script>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} forcedTheme="light">
           <BackgroundBlur />
           <MainHeader />
