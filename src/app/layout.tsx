@@ -13,6 +13,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Shrestha IT",
   description: "Practical financial-market education in equity, forex, crypto, and derivatives.",
+  verification: {
+    google: "aQPAAtBBc2UIFtKhP5HkOP8EVcTjt2OhgMCKw9JSsh8",
+  },
 };
 
 export default function RootLayout({
