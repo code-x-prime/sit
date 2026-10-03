@@ -35,14 +35,18 @@ export default function TermsPage() {
           </Section>
 
           <Section title="3. Refund & Cancellation Policy">
-            Fees paid towards course enrollment are generally non-refundable once a batch has commenced. Requests for
-            cancellation before batch commencement may be considered on a case-by-case basis at our sole discretion.
-            Please contact our support team for any refund-related queries.
+            All services and courses (online or offline) are strictly non-refundable once purchased or enrolled. Once
+            enrollment is confirmed, fees will not be refunded or transferred under any circumstances, including if the
+            student withdraws, backs out, loses interest, or is unable to attend. The only exception: if Shrestha IT
+            fails to conduct the classes/services for which payment was made, the student will be eligible for a 100%
+            refund of the fee paid for those undelivered classes/services. Please contact our support team for any
+            queries.
           </Section>
 
           <Section title="4. Educational Purpose & No Financial Advice">
             All courses, live sessions, mentorship, and materials provided by Shrestha IT are strictly for educational
-            purposes. Nothing on this website or in our courses constitutes financial, investment, or trading advice.
+            purposes only. Shrestha IT is an education provider and not a SEBI-registered investment advisor or
+            research analyst; nothing on this website or in our courses constitutes financial, investment, or trading advice.
             Trading and investing in equity, derivatives, forex, and cryptocurrency markets involves substantial risk
             of loss and is not suitable for every individual. You are solely responsible for your own trading and
             investment decisions.

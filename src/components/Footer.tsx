@@ -277,14 +277,32 @@ export function Footer() {
 
         </div>
 
+        {/* Policy Notes */}
+        <div className="mt-6 space-y-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-[11px] sm:text-xs text-gray-400 leading-relaxed">
+          <p className="flex gap-2">
+            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
+            <span>
+              <strong className="text-amber-400">NOTE:</strong> All services and courses (online or offline) are
+              strictly non-refundable once purchased or enrolled. Refund applies only if Shrestha IT fails to conduct
+              the paid classes.
+            </span>
+          </p>
+          <p className="flex gap-2">
+            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
+            <span>
+              <strong className="text-amber-400">DISCLAIMER:</strong> All courses and sessions are for educational
+              purposes only. We are not SEBI-registered investment advisors and do not provide financial advice or
+              guarantee profits. Trading involves risk of loss.
+            </span>
+          </p>
+        </div>
+
         {/* Bottom Legal Bar & Credit */}
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-gray-400">
           <div className="flex items-center gap-3 text-gray-300 font-medium">
-            <span className="hover:text-white cursor-pointer transition">TERMS & CONDITIONS</span>
+            <Link href="/terms" className="hover:text-white transition">TERMS & CONDITIONS</Link>
             <span>•</span>
-            <span className="hover:text-white cursor-pointer transition">PRIVACY POLICY</span>
-            <span>•</span>
-            <span className="hover:text-white cursor-pointer transition">DISCLAIMER</span>
+            <Link href="/privacy" className="hover:text-white transition">PRIVACY POLICY</Link>
           </div>
 
           <p>© {new Date().getFullYear()} Shrestha IT Academy. All rights reserved.</p>
