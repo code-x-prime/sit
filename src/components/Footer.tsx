@@ -247,7 +247,7 @@ export function Footer() {
               </a>
 
               <a
-                href="mailto:support@shrestha.com"
+                href="mailto:hr@shresthaedutech.com"
                 className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400/50 transition duration-200 group"
               >
                 <div className="p-2 rounded-lg bg-sky-500/20 text-sky-400 shrink-0">
@@ -256,7 +256,7 @@ export function Footer() {
                 <div>
                   <div className="text-[10px] text-gray-400">Official Email</div>
                   <div className="font-bold text-white group-hover:text-sky-400 transition">
-                    support@shrestha.com
+                    hr@shresthaedutech.com
                   </div>
                 </div>
               </a>

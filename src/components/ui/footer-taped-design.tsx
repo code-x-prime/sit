@@ -58,7 +58,7 @@ export const Component = () => {
               <h4 className='uppercase font-heading text-md text-gray-500 font-semibold'>Contact</h4>
               <div className="flex flex-col gap-2 text-sm items-start">
                 <a className='text-gray-500 hover:text-navy font-medium transition-colors' href="tel:+919236666923">+91 9236666923</a>
-                <a className='text-gray-500 hover:text-navy font-medium transition-colors break-all' href="mailto:support@shresthaacademy.com">support@shrestha.com</a>
+                <a className='text-gray-500 hover:text-navy font-medium transition-colors break-all' href="mailto:hr@shresthaedutech.com">hr@shresthaedutech.com</a>
                 <span className='text-gray-500 font-medium'>Uttam Nagar, New Delhi</span>
               </div>
             </div>
