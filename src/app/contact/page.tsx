@@ -8,12 +8,17 @@ import {
   IconMapPin,
   IconPhone,
   IconExternalLink,
-  IconCheck,
   IconSend,
   IconSparkles,
   IconLoader2,
   IconAlertTriangle,
 } from "@tabler/icons-react";
+
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+  }
+}
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -23,7 +28,6 @@ export default function ContactPage() {
     course: "Indian Equity Market",
     message: "",
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -45,8 +49,22 @@ export default function ContactPage() {
         throw new Error(data.error || "Something went wrong.");
       }
 
-      setIsSubmitted(true);
-      setFormState({ name: "", phone: "", email: "", course: "Indian Equity Market", message: "" });
+      let done = false;
+      const waUrl = `https://wa.me/919236666923?text=${encodeURIComponent(whatsappMsg)}`;
+      const goToWhatsApp = () => {
+        if (!done) {
+          done = true;
+          window.location.href = waUrl;
+        }
+      };
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "lead_form_success",
+        eventCallback: goToWhatsApp,
+        eventTimeout: 1500,
+      });
+      window.setTimeout(goToWhatsApp, 1500);
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : "Something went wrong. Please try again.";
       setError(message);
@@ -136,29 +154,7 @@ Message: ${formState.message || "Please share admission & course details."}`;
             {/* Right Column: Minimalist Underline Form matching Reference Image */}
             <div className="lg:col-span-6 bg-[#f7f6f2] dark:bg-card border border-navy/10 dark:border-white/10 p-8 sm:p-10 md:p-12 rounded-3xl shadow-2xl">
               
-              {isSubmitted ? (
-                <div className="text-center py-12 space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center mx-auto">
-                    <IconCheck className="w-8 h-8 stroke-[3]" />
-                  </div>
-                  <h3 className="text-2xl font-black text-navy-dark dark:text-white">
-                    Enquiry Submitted!
-                  </h3>
-                  <p className="text-sm text-muted-foreground max-w-md mx-auto">
-                    Thank you for contacting Shrestha IT. Our senior mentor will connect with you shortly.
-                  </p>
-                  <a
-                    href={`https://wa.me/919236666923?text=${encodeURIComponent(whatsappMsg)}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-emerald-600 text-white font-bold text-xs shadow-md hover:bg-emerald-700 transition"
-                  >
-                    <IconBrandWhatsapp className="w-4 h-4 text-white" />
-                    <span>Chat Immediately on WhatsApp</span>
-                  </a>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="border-b border-navy/10 dark:border-white/10 pb-4">
                     <span className="text-[11px] font-bold uppercase tracking-widest text-[#01488B] dark:text-amber">
                       Direct Mentorship Enquiry
@@ -292,8 +288,7 @@ Message: ${formState.message || "Please share admission & course details."}`;
                     </a>
                   </div>
 
-                </form>
-              )}
+              </form>
 
             </div>
 
