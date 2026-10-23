@@ -5,6 +5,7 @@ import { Component as TapedFooter } from "@/components/ui/footer-taped-design";
 import { MainHeader } from "@/components/ui/main-header";
 import { HeaderOffset } from "@/components/HeaderOffset";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { SiteChrome } from "@/components/landing/SiteChrome";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { FloatingSocialBar } from "@/components/FloatingSocialBar";
 import { oswald, poppins } from "@/lib/fonts";
@@ -58,14 +59,20 @@ export default function RootLayout({
           `}
         </Script>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} forcedTheme="light">
-          <BackgroundBlur />
-          <MainHeader />
-          <FloatingSocialBar />
+          <SiteChrome>
+            <BackgroundBlur />
+            <MainHeader />
+            <FloatingSocialBar />
+          </SiteChrome>
           <div className="flex min-h-screen flex-col">
-            <HeaderOffset />
+            <SiteChrome>
+              <HeaderOffset />
+            </SiteChrome>
             <main className="flex-1">{children}</main>
-            <ScrollToTop />
-            <TapedFooter />
+            <SiteChrome>
+              <ScrollToTop />
+              <TapedFooter />
+            </SiteChrome>
           </div>
         </ThemeProvider>
       </body>

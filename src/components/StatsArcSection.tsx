@@ -62,6 +62,7 @@ function StatCard({
           val: numberVal,
           duration: 2,
           ease: "power2.out",
+          immediateRender: false,
           scrollTrigger: {
             trigger: cardRef.current,
             start: "top 88%",
@@ -87,7 +88,7 @@ function StatCard({
         <div className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight font-heading flex items-baseline gap-1">
           {numberVal !== undefined ? (
             <span ref={numRef} className="tabular-nums">
-              {prefix}0{suffix}
+              {value}
             </span>
           ) : (
             <span>{value}</span>

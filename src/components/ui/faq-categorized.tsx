@@ -203,21 +203,21 @@ export function CategorizedFaq({
                       </div>
                     </button>
 
-                    <AnimatePresence mode="wait">
-                      {isOpen && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
-                          className="overflow-hidden"
-                        >
-                          <div className="px-4 pb-4 sm:px-6 sm:pb-6 text-slate-600 dark:text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed border-t border-slate-100 dark:border-slate-800/80 pt-2.5">
-                            {item.answer}
-                          </div>
-                        </motion.div>
+                    <div
+                      className={cn(
+                        "grid transition-[grid-template-rows] duration-200 ease-out",
+                        isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
                       )}
-                    </AnimatePresence>
+                    >
+                      <div className="overflow-hidden">
+                        <div
+                          className="px-4 pb-4 sm:px-6 sm:pb-6 text-slate-600 dark:text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed border-t border-slate-100 dark:border-slate-800/80 pt-2.5"
+                          aria-hidden={!isOpen}
+                        >
+                          {item.answer}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 );
               })}

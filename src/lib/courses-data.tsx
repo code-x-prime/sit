@@ -139,7 +139,7 @@ export const COURSES: CourseCategory[] = [
     curriculum: [
       "Crypto Currency Pairs & Blockchain Basics",
       "Market Cycles & Altcoin Concepts",
-      "Leverage & Short-Selling Concepts",
+      "Volatility & Position-Sizing Principles",
       "Risk & Reward-Management Concepts",
     ],
     image: "/courses/crypto.jpg",

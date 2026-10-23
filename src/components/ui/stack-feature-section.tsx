@@ -5,19 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const logoConfigs = [
-  { src: "/logos/zerodha.jpeg", alt: "Zerodha" },
-  { src: "/logos/groww.png", alt: "Groww" },
-  { src: "/logos/angelone.png", alt: "Angel One" },
-  { src: "/logos/dhan.jpeg", alt: "Dhan" },
-  { src: "/logos/trading-view.png", alt: "Trading View" },
-  { src: "/logos/meta-5.png", alt: "MetaTrader 5" },
-  { src: "/logos/nse-india.png", alt: "NSE India" },
-  { src: "/logos/fyers.jpeg", alt: "Fyers" },
-  { src: "/logos/sharekhan.jpeg", alt: "Sharekhan" },
+  { src: "/logos/trading-view.png", alt: "TradingView" },
   { src: "/logos/sensibull.png", alt: "Sensibull" },
-  { src: "/logos/exness.jpeg", alt: "Exness" },
-  { src: "/logos/vantage.jpeg", alt: "Vantage" },
-  { src: "/logos/delta-exchange.png", alt: "Delta Exchange" },
   { src: "/logos/screener.png", alt: "Screener" },
   { src: "/logos/investopedia.png", alt: "Investopedia" },
 ];
@@ -39,7 +28,7 @@ export default function FeatureSection({
   secondaryBtnText = "Explore Programs",
   secondaryBtnHref = "/courses"
 }: FeatureSectionProps) {
-  const orbitCount = 3;
+  const orbitCount = 2;
   const orbitGap = 7; // rem between orbits
   const iconsPerOrbit = Math.ceil(logoConfigs.length / orbitCount);
 

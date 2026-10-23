@@ -36,7 +36,7 @@ const testimonials: Testimonial[] = [
     location: "Lucknow, UP",
     image: "/testimonials/azhar- crypto trader.jpeg",
     quote:
-      "Crypto market volatility ko samajhna aur leverage/short-selling concepts SIT ke live sessions me seekhe. Faculty support superb hai, continuous doubt-clearing sessions milte hain.",
+      "Crypto market ki volatility samajhna SIT ke live sessions me seekha. Faculty support superb hai, continuous doubt-clearing sessions milte hain.",
   },
   {
     name: "Pawan Yadav",

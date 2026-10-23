@@ -58,7 +58,7 @@ export const Component = () => {
               <h4 className='uppercase font-heading text-md text-gray-500 font-semibold'>Contact</h4>
               <div className="flex flex-col gap-2 text-sm items-start">
                 <a className='text-gray-500 hover:text-navy font-medium transition-colors' href="tel:+919236666923">+91 9236666923</a>
-                <a className='text-gray-500 hover:text-navy font-medium transition-colors break-all' href="mailto:hr@shresthaedutech.com">hr@shresthaedutech.com</a>
+                <a className='text-gray-500 hover:text-navy font-medium transition-colors whitespace-nowrap' href="mailto:hr@shresthaedutech.com">hr@shresthaedutech.com</a>
                 <span className='text-gray-500 font-medium'>Uttam Nagar, New Delhi</span>
               </div>
             </div>
@@ -118,6 +118,9 @@ export const Component = () => {
           </div>
         </div>
       </div>
+      <p className="mx-auto max-w-4xl px-4 pb-4 text-center text-xs sm:text-sm leading-relaxed text-gray-600">
+        <strong>Risk Disclaimer:</strong> Shrestha IT is an educational institute. All courses and content are for educational and informational purposes only. We do not provide investment advice, trading signals, tips, portfolio management or buy/sell recommendations, and we are not a SEBI-registered investment adviser or research analyst. Investments in equity, derivatives, forex and crypto assets carry high risk, including loss of entire capital. Past performance is not a guarantee of future results.
+      </p>
     </footer>
   );
 };
