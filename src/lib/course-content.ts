@@ -171,7 +171,7 @@ export const COURSE_CONTENT: Record<string, CourseDetailContent> = {
       { question: "Is this course only about Futures & Options, or does it include Equity too?", answer: "This course is specialized purely in Futures & Options (F&O) derivatives education. For a combined Equity + F&O program, check our Equity & Derivatives Combo course." },
       { question: "What is the duration and structure of this course?", answer: "It's a 2-month program across 4 levels: Minor, Major, Bachelor, and SIT, moving from futures fundamentals to expiry-day market analysis." },
       { question: "Will I learn how option pricing (Greeks) works?", answer: "Yes, the course covers Option Greeks — Delta, Theta, Gamma, and Vega — along with their practical application in analyzing options structures." },
-      { question: "How much does this course cost?", answer: "The course fee is ₹20,000 for both offline and online batches, with 10% off on one-shot payment." },
+      { question: "How much does this course cost?", answer: "The course fee is ₹15,000 + GST for both offline and online batches, with 10% off on one-shot payment." },
       { question: "Do you cover expiry-day market analysis?", answer: "Yes, Level 4 (SIT) is dedicated to advanced market analysis and expiry-day sessions, including time-decay and volatility-based concepts." },
       { question: "Do I need prior derivatives knowledge before joining?", answer: "No, Level 1 builds the futures & options foundation from scratch before moving into concept-level content." },
       { question: "Will I learn option-writing concepts, not just buying?", answer: "Yes, Level 2 covers both options-buying and option-writing structures, including the margin and risk concepts of each." },
