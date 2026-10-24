@@ -47,7 +47,7 @@ export const Component = () => {
             <div className='flex flex-col gap-1 md:gap-4'>
               <h4 className='uppercase font-heading text-md text-gray-500 font-semibold'>Market Education</h4>
               <div className="flex flex-col gap-2 text-sm items-start">
-                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/equity-derivatives">Equity & Derivatives Education</Link>
+                <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/equity-derivatives">Stock Market Education</Link>
                 <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/forex">Forex Market Education</Link>
                 <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/crypto">Crypto & Web3 Education</Link>
                 <Link className='text-gray-500 hover:text-navy font-medium transition-colors' href="/courses/derivatives">F&O & Derivatives Education</Link>

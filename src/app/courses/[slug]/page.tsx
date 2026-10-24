@@ -91,7 +91,7 @@ export default async function CourseDetailPage({
     },
     offers: {
       "@type": "Offer",
-      price: course.offlinePrice.replace(/,/g, ""),
+      price: course.offlinePrice.replace(/[^d]/g, ""),
       priceCurrency: "INR",
       category: "Trading Education",
     },
